@@ -1,0 +1,237 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_size"
+        android:background="@drawable/one"
+        android:gravity="start" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/title_text_top"
+            android:text="饮奶综合评分"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/title_text_size" />
+
+        <ImageView
+            android:id="@+id/menu_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/side_menu_entry" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/framelayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            
+            android:layout_weight = "3" >
+
+            <LinearLayout
+                android:id="@+id/circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+           android:layout_height="0dp"
+            android:layout_weight = "2"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="105dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/circle_to_text"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/last_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="上次用量："
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/Home_text_size_1" />
+
+                    <TextView
+                        android:id="@+id/last_milk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/last_amount"
+                        android:layout_marginTop="@dimen/text_spacing"
+                        android:text="奶量"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/Home_text_size_1" />
+
+                    <TextView
+                        android:id="@+id/last_temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/last_milk"
+                        android:layout_marginTop="@dimen/text_spacing"
+                        android:text="温度 "
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/Home_text_size_1" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/last_temperature"
+                        android:layout_marginBottom="-4dp"
+                        android:layout_marginLeft="@dimen/text_spacing_horizontal"
+                        android:layout_toRightOf="@+id/last_temperature"
+                        android:gravity="bottom|left"
+                        android:text="36.5°C"
+                        android:textColor="@color/num_color"
+                        android:textSize="@dimen/Home_text_size_2" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/last_milk"
+                        android:layout_marginBottom="-4dp"
+                        android:layout_marginLeft="@dimen/text_spacing_horizontal"
+                        android:layout_toRightOf="@+id/last_milk"
+                        android:gravity="bottom"
+                        android:text="160ML"
+                        android:textColor="@color/num_color"
+                        android:textSize="@dimen/Home_text_size_2" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="105dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/circle_to_text"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="建议用量"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/Home_text_size_1" />
+
+                    <TextView
+                        android:id="@+id/milk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/amount"
+                        android:layout_marginTop="@dimen/text_spacing"
+                        android:text="奶量"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/Home_text_size_1" />
+
+                    <TextView
+                        android:id="@+id/Temperatrue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/milk"
+                        android:layout_marginTop="@dimen/text_spacing"
+                        android:text="温度 "
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/Home_text_size_1" />
+
+                    <TextView
+                        android:id="@+id/textView04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/milk"
+                        android:layout_marginBottom="-4dp"
+                        android:layout_marginLeft="@dimen/text_spacing_horizontal"
+                        android:layout_toRightOf="@+id/milk"
+                        android:gravity="bottom|left"
+                        android:text="200ML"
+                        android:textColor="#02bdb4"
+                        android:textSize="@dimen/Home_text_size_2" />
+
+                    <TextView
+                        android:id="@+id/TextView03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Temperatrue"
+                        android:layout_marginBottom="-4dp"
+                        android:layout_marginLeft="@dimen/text_spacing_horizontal"
+                        android:layout_toRightOf="@+id/Temperatrue"
+                        android:gravity="bottom|left"
+                        android:text="40.6°C"
+                        android:textColor="#02bdb4"
+                        android:textSize="@dimen/Home_text_size_2" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#ffffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tuisong"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="喝牛奶建议不要放太多糖，这样对身体的发育不好,请好好注意这点。。。。"
+            android:textColor="#777777"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
