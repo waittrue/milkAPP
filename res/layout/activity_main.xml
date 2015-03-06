@@ -10,11 +10,10 @@
     tools:context="com.example.test_circle.MainActivity" >
 
     <LinearLayout
-        android:id="@+id/translate"
+        android:id="@+id/Activity_fragments_container"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#ff0000ff"
         android:orientation="vertical" >
     </LinearLayout>
 
@@ -26,10 +25,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/buttons"
+        android:id="@+id/Activity_buttons_fragments_container"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-         android:background="#ff00ff00"
+        android:layout_height="@dimen/activity_buttons_fragment_height"
         android:orientation="vertical"
          >
     </LinearLayout>

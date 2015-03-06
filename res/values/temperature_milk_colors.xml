@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="temperature_milk_checked_color">#b2ebf9</color>
+    <color name="temperature_milk_unchecked_color">#02b4ba</color>
+</resources>

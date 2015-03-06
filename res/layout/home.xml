@@ -10,7 +10,7 @@
         android:gravity="start" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/home_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/menu_entry_height"
             android:layout_alignParentLeft="true"
-            android:layout_alignTop="@+id/textView1"
+            android:layout_alignTop="@+id/home_title_text"
             android:layout_marginLeft="@dimen/menu_margin_left"
             android:src="@drawable/menu_entry" />
 
@@ -112,9 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_left_third_title"
                         android:layout_marginBottom="-4dp"
-                        android:layout_marginLeft="@dimen/home_advise_text_margin_left"
-                        android:layout_toRightOf="@+id/home_left_third_title"
-                        android:gravity="bottom|left"
+                        android:layout_toRightOf="@id/home_left_third_title"
                         android:text="36.5°C"
                         android:textColor="@color/home_advise_left_num_color"
                         android:textSize="@dimen/home_advise_num_size" />
@@ -125,12 +123,11 @@
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_left_second_title"
                         android:layout_marginBottom="-4dp"
-                        android:layout_marginLeft="@dimen/home_advise_text_margin_left"
-                        android:layout_toRightOf="@+id/home_left_second_title"
-                        android:gravity="bottom"
+                        android:layout_toRightOf="@id/home_left_second_title"
                         android:text="160ML"
                         android:textColor="@color/home_advise_left_num_color"
                         android:textSize="@dimen/home_advise_num_size" />
+
                 </RelativeLayout>
             </RelativeLayout>
 
@@ -140,7 +137,8 @@
                 android:layout_weight="1" >
 
                 <RelativeLayout
-                   android:layout_width="@dimen/home_advise_layout_width"
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="@dimen/home_advise_layout_width"
                     android:layout_height="@dimen/home_advise_layout_height"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
@@ -185,10 +183,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_right_second_title"
                         android:layout_marginBottom="-4dp"
-                        android:layout_marginLeft="@dimen/home_advise_text_margin_left"
-                        android:layout_toRightOf="@+id/home_right_second_title"
-                        android:gravity="bottom|left"
-                        android:text="200ML"
+                        android:layout_toRightOf="@id/home_right_second_title"
+                        android:text="100ML"
                         android:textColor="@color/home_advise_right_num_color"
                         android:textSize="@dimen/home_advise_num_size" />
 
@@ -198,12 +194,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_right_third_title"
                         android:layout_marginBottom="-4dp"
-                        android:layout_marginLeft="@dimen/home_advise_text_margin_left"
-                        android:layout_toRightOf="@+id/home_right_third_title"
+                        android:layout_toRightOf="@id/home_right_third_title"
                         android:gravity="bottom|left"
                         android:text="40.6°C"
                         android:textColor="@color/home_advise_right_num_color"
                         android:textSize="@dimen/home_advise_num_size" />
+
                 </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>

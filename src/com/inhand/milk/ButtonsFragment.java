@@ -2,7 +2,7 @@ package com.inhand.milk;
 
 import com.example.aaaa.R;
 import com.inhand.milk.bluetooth.bluetooth_fragment;
-import com.inhand.milk.temperature.tempreture_milk_fragment;
+import com.inhand.milk.temperature.TempretureMilkFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -17,7 +17,7 @@ import android.widget.ImageButton;
 public class ButtonsFragment extends Fragment {
 
 	private View view;
-	private tempreture_milk_fragment tempreture,amount;
+	private TempretureMilkFragment tempreture,amount;
 	private bluetooth_fragment bluetooth;
 	private HomeFragment home;
 	private CurrentFragment currentFragment = CurrentFragment.HOME; 
@@ -44,7 +44,7 @@ public class ButtonsFragment extends Fragment {
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		if (home ==null)
 			home = new HomeFragment();
-		fragmentTransaction.add(R.id.translate, home,"HOME"); 
+		fragmentTransaction.add(R.id.Activity_fragments_container, home,"HOME"); 
         fragmentTransaction.commit();  
 	}
 	
@@ -73,15 +73,16 @@ public class ButtonsFragment extends Fragment {
 					currentFragment = CurrentFragment.AMOUNT;
 					
 					if(amount == null){
-						amount =  new tempreture_milk_fragment();
+						amount =  new TempretureMilkFragment();
 						amount.isTemperature(false);
-						fragmentTransaction.add(R.id.translate, amount, "AMOUNT");
+						fragmentTransaction.add(R.id.Activity_fragments_container, amount, "AMOUNT");
 					}
 					else{
 						fragmentTransaction.show(amount);
+						amount.refresh();
 					}
 					fragmentTransaction.commit();
-					amount.refresh();
+					
 				}    
 			});
 		 
@@ -109,16 +110,15 @@ public class ButtonsFragment extends Fragment {
 					currentFragment = CurrentFragment.TEMPERATURE;
 					
 					if(tempreture == null){
-						tempreture =  new tempreture_milk_fragment();
+						tempreture =  new TempretureMilkFragment();
 						tempreture.isTemperature(true);
-						fragmentTransaction.add(R.id.translate, tempreture, "TENPRETURE");
+						fragmentTransaction.add(R.id.Activity_fragments_container, tempreture, "TENPRETURE");
 					}
 					else{
 						fragmentTransaction.show(tempreture);
-					}
-					//tempreture.refresh();
-					fragmentTransaction.commit();
-					
+						tempreture.refresh();
+					}	
+					fragmentTransaction.commit();	
 				}    
 			});
 		 
@@ -175,7 +175,7 @@ public class ButtonsFragment extends Fragment {
 				
 				if(bluetooth == null){
 					bluetooth = new bluetooth_fragment(  ((MainActivity)ButtonsFragment.this.getActivity() ).getBluetooth());
-					fragmentTransaction.add(R.id.translate, bluetooth,"BLUETOOTH");
+					fragmentTransaction.add(R.id.Activity_fragments_container, bluetooth,"BLUETOOTH");
 				}
 				else {
 					fragmentTransaction.show(bluetooth);

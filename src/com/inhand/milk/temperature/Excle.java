@@ -78,6 +78,9 @@ public class Excle extends View{
 	}
 	//如果是今天,那格式<2.5h,10°>
 	//如果是月或者周，那格式是<30°>
+	public void clearData(){
+		orignalLineData.clear();
+	}
 	 public void addLine(List<float[]> p){
 		 orignalLineData.add(p);
 		
