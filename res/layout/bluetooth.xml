@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/top"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/title_size"
+        android:layout_height="@dimen/title_height"
         android:background="@drawable/details_one"
         android:orientation="horizontal" >
 
@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/title_text_top"
+            android:layout_marginTop="@dimen/title_margin_top"
             android:text="选择蓝牙配对"
             android:textColor="#ffffffff"
             android:textSize="@dimen/title_text_size" />
