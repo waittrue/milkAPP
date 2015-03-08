@@ -2,4 +2,17 @@
 <resources>
     <color name="temperature_milk_checked_color">#b2ebf9</color>
     <color name="temperature_milk_unchecked_color">#02b4ba</color>
+    <color name="temperature_milk_title_text_color">#ffffff</color>
+    <color name="temperature_milk_excle_background_color">#ffffff</color>
+    <color name="temperature_milk_excle_title_text_color">#000000</color>
+    <color name="temperature_milk_excle_grid_first_background_color">#edfaf9</color>
+    <color name="temperature_milk_excle_grid_second_background_color">#ffffff</color>
+    <color name="temperature_milk_excle_line_color">#0196a0</color>
+    
+    
+    <color name="milk_circle_double_line_color">#209297</color>
+    
+    <color name="temperature_circle_line_background_color">#209297</color>
+    <color name="temperature_circle_left_line_color">#eef966</color>
+    <color name="temperature_circle_right_line_color">#00f5fe</color>
 </resources>

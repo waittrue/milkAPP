@@ -5,8 +5,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/home_title_height"
-        android:background="@drawable/home_title_background"
+        android:layout_height="@dimen/main_title_height"
+        android:background="@drawable/main_title_background"
         android:gravity="start" >
 
         <TextView
@@ -15,10 +15,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/home_title_margin_top"
+            android:layout_marginTop="@dimen/main_title_margin_top"
             android:text="@string/home_title_text"
-            android:textColor="@color/home_text_color"
-            android:textSize="@dimen/home_title_text_size" />
+            android:textColor="@color/main_title_text_color"
+            android:textSize="@dimen/main_title_text_size" />
 
         <ImageView
             android:id="@+id/menu_entry"
@@ -44,7 +44,7 @@
             android:layout_weight = "3" >
 
             <LinearLayout
-                android:id="@+id/home_circle"
+                android:id="@+id/temperature_milk_circle_container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

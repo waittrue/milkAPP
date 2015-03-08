@@ -6,29 +6,28 @@
     android:orientation="vertical" >
 
     <RelativeLayout
-        android:id="@+id/top"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/title_height"
-        android:background="@drawable/details_one"
+        android:layout_height="30dp"
+        android:background="@drawable/main_title_background"
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/health_nutrition_header_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/title_margin_top"
+            android:layout_marginTop="@dimen/main_title_margin_top"
             android:text="选择蓝牙配对"
             android:textColor="#ffffffff"
-            android:textSize="@dimen/title_text_size" />
+            android:textSize="@dimen/main_title_text_size" />
 
         <ImageView
-            android:id="@+id/back"
+            android:id="@+id/health_nutrition_back"
             android:layout_width="50dp"
-            android:layout_height="@dimen/title_text_size"
-            android:layout_alignBottom="@+id/title"
+            android:layout_height="@dimen/main_title_text_size"
+            android:layout_alignBottom="@+id/health_nutrition_header_layout"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="26dp"
             android:src="#ffffffff" />

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="temperature_milk_day_text">日</string>
+    <string name="temperature_milk_week_text">周</string>
+    <string name="temperature_milk_month_text">月</string>
+    
+    <string name="temperature_title_text">饮奶温度统计</string>
+    <string name="temperature_excle_day_right_title">今天</string>
+    <string name="temperature_excle_day_left_title">饮奶温度/°C</string>
+    <string name="temperature_excle_week_right_title">本周</string>
+    <string name="temperature_excle_week_left_title">饮奶温度/°C</string>
+    <string name="temperature_excle_month_right_title">本月</string>
+    <string name="temperature_excle_month_left_title">饮奶温度/°C</string>
+    
+    <string name="milk_title_text">饮奶奶量统计</string>
+    <string name="milk_excle_day_right_title">今天</string>
+    <string name="milk_excle_day_left_title">饮奶奶量/ml</string>
+    <string name="milk_excle_week_right_title">本周</string>
+    <string name="milk_excle_week_left_title">饮奶奶量/ml</string>
+    <string name="milk_excle_month_right_title">本月</string>
+    <string name="milk_excle_month_left_title">饮奶奶量/ml</string>
+    
+    <string name="temerature_circle_bottome_left_title">饮奶开始温度</string>
+    <string name="temerature_circle_bottome_right_title">饮奶结束温度</string>
+    
+</resources>

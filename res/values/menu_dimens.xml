@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_title_height">100dp</dimen>
+    <dimen name="menu_head_icon_width">60dp</dimen>
+    <dimen name="menu_head_icon_height">60dp</dimen>
+    <dimen name="menu_head_icon_margin_left">30dp</dimen>
+    <dimen name="menu_head_icon_margin_bottom">30dp</dimen>
+    <dimen name="menu_head_text_margin_left_icon">20dp</dimen>
+    <dimen name="menu_head_name_text_size">15dp</dimen>
+    <dimen name="menu_head_id_text_size">14dp</dimen>
+    <dimen name="menu_head_under_line_height">1px</dimen>
+    <dimen name="menu_head_under_line_margin_left">25dp</dimen>
+    
+    <dimen name="menu_item_height">50dp</dimen>
+    <dimen name="menu_item_icon_height">30dp</dimen>
+    <dimen name="menu_item_icon_width">30dp</dimen>
+    <dimen name="menu_item_icon_margin_left">20dp</dimen>
+    <dimen name="menu_item_text_margin_left_icon">10dp</dimen>
+    <dimen name="menu_item_text_size">15sp</dimen>
+     <dimen name="menu_behind_offset">60dp</dimen>
+</resources>

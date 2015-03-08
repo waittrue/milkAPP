@@ -5,21 +5,20 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/top"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/title_height"
-        android:background="@drawable/tpone"
+        android:layout_height="@dimen/temperature_milk_title_height"
+        android:background="@drawable/temperature_milk_title_background"
         android:orientation="vertical" >
-
+		
+        
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/health_nutrition_header_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/title_margin_top"
-            android:text="饮奶温度统计"
-            android:textColor="#ffffffff"
-            android:textSize="@dimen/title_text_size" />
+            android:layout_marginTop="@dimen/main_title_margin_top"
+            android:textColor="@color/temperature_milk_title_text_color"
+            android:textSize="@dimen/main_title_text_size" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -45,14 +44,15 @@
                     android:layout_weight="0.26" >
 
                     <TextView
-                        android:id="@+id/day"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/temperature_milk_day_show"
+                        android:layout_width="@dimen/temperature_milk_date_layout_width"
+                        android:layout_height="@dimen/temperature_milk_date_layout_height"
                         android:layout_alignParentBottom="true"
                         android:layout_centerInParent="true"
-                        android:text="日"
-                        android:textColor="#ffffffff"
-                        android:textSize="20sp" />
+                        android:gravity="bottom|center_horizontal"
+                        android:text="@string/temperature_milk_day_text"
+                        android:textSize="@dimen/temperature_milk_date_text_size" />
+
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -61,14 +61,15 @@
                      android:layout_weight="0.26" >
 
                     <TextView
-                        android:id="@+id/week"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/temperature_milk_week_show"
+                        android:layout_width="@dimen/temperature_milk_date_layout_width"
+                        android:layout_height="@dimen/temperature_milk_date_layout_height"
                         android:layout_alignParentBottom="true"
                         android:layout_centerInParent="true"
-                        android:text="周"
-                        android:textColor="#ffffffff"
-                        android:textSize="20sp" />
+                        android:gravity="bottom|center_horizontal"
+                        android:text="@string/temperature_milk_week_text"
+                        android:textSize="@dimen/temperature_milk_date_text_size" />
+
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -77,14 +78,15 @@
                     android:layout_weight="0.26" >
 
                     <TextView
-                        android:id="@+id/month"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/temperature_milk_month_show"
+                        android:layout_width="@dimen/temperature_milk_date_layout_width"
+                        android:layout_height="@dimen/temperature_milk_date_layout_height"
                         android:layout_alignParentBottom="true"
                         android:layout_centerInParent="true"
-                        android:text="月"
-                        android:textColor="#ffffffff"
-                        android:textSize="20sp" />
+                        android:gravity="bottom|center_horizontal"
+                        android:text="@string/temperature_milk_month_text"
+                        android:textSize="@dimen/temperature_milk_date_text_size" />
+
                 </RelativeLayout>
 
                 <LinearLayout
@@ -96,10 +98,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/line_move"
+                android:id="@+id/temperature_milk_time_line_layout"
                 android:layout_width="fill_parent"
-                android:layout_height="3dp"
-                android:background="@drawable/timeline"
+                android:layout_height="@dimen/temperature_milk_time_line_height"
+                android:background="@drawable/temperature_time_line_background"
                 android:orientation="horizontal" >
             </LinearLayout>
         </LinearLayout>

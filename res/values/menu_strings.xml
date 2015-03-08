@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_item_texts">
+        <item >家庭成员</item>
+        <item >奶瓶设置</item>
+        <item >个人意见</item>
+    </string-array>
+    
+</resources>

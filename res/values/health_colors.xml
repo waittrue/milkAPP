@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="health_item_name_color">#ff000000</color>
+    <color name="health_item_details_color">#ff888888</color>
+    
+    <color name="health_listview_color">#ffffffff</color>
+    <color name="health_listview_dividing_line_color">#ffc8c8c8</color>
+    
+    <color name="health_nutrition_time_now_text_color">#ff000000</color>
+    
+</resources>
