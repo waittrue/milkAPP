@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="details_milk_title_string">饮奶奶量详情</string>
+    <string name="details_temperature_title_string">饮奶温度详情</string>
+    
+     <string name="details_once_title_string">饮奶详情</string>
     
 </resources>

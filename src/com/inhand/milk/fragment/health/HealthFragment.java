@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -102,6 +103,9 @@ public class HealthFragment extends Fragment{
 			
 		};
 		listView.setOnItemClickListener(onItemClickListener);
+		
+		ImageView menu = (ImageView)view.findViewById(R.id.home_menu_entry);
+		menu.setOnClickListener(( (MainActivity)getActivity() ).getMyOnclickListener() );
 	}
 	
 	@Override

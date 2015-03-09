@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+         android:layout_height="@dimen/main_title_height"
+        android:background="@drawable/main_title_background" >
+
+        <TextView
+            android:id="@+id/details_once_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="@dimen/main_title_margin_top"
+            android:text="@string/details_once_title_string"
+            android:textColor="@color/main_title_text_color"
+            android:textSize="@dimen/main_title_text_size" />
+
+        <ImageView
+            android:id="@+id/details_once_back"
+            android:layout_width="@dimen/back_icon_width"
+            android:layout_height="@dimen/back_icon_height"
+            android:layout_alignBottom="@id/details_once_title"
+            android:layout_marginLeft="@dimen/back_icon_margin_left"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_icon" />
+
+    </RelativeLayout>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/details_content_height" >
+
+            <ImageView
+                android:id="@+id/details_once_amount_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:src="@drawable/buttons_milk_icon" />
+
+            <TextView
+                android:id="@+id/details_once_amount_ttitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/details_once_title_margin_icon_left"
+                android:layout_toRightOf="@id/details_once_amount_icon"
+                android:text="饮奶量信息"
+                android:textColor="@color/details_once_title_color"
+                android:textSize="@dimen/details_once_title_size" />
+
+        </RelativeLayout>
+
+    </TableRow>
+    
+</LinearLayout>

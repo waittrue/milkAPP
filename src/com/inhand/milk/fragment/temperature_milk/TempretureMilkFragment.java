@@ -77,13 +77,13 @@ public class TempretureMilkFragment extends Fragment {
 		String title ;
 		if(isTemperture == true){
 			title =  getResources().getString(R.string.temperature_title_text);
-			((TextView)view.findViewById( R.id.health_nutrition_header_layout) ).setText(title);
+			((TextView)view.findViewById( R.id.temperature_milk_title_text) ).setText(title);
 			drawTemperatrueExcle(view);
 			drawTpCircle(view);
 		}
 		else {
 			title = getResources().getString(R.string.milk_title_text);
-			((TextView)view.findViewById(R.id.health_nutrition_header_layout) ).setText(title);	
+			((TextView)view.findViewById(R.id.temperature_milk_title_text) ).setText(title);	
 			drawMilkExcle(view);
 			drawMilkCircle(view);
 		}
@@ -539,7 +539,9 @@ public class TempretureMilkFragment extends Fragment {
 			FragmentManager fragmentManager = getFragmentManager();  
 			FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();  
 			fragmentTransaction.hide(TempretureMilkFragment.this);
-			fragmentTransaction.add(R.id.Activity_fragments_container , new DetailsFragment(), "details");
+			DetailsFragment detailsFragment = new DetailsFragment();
+			detailsFragment.setTemperature(isTemperture);
+			fragmentTransaction.add(R.id.Activity_fragments_container, detailsFragment, "details");
 			fragmentTransaction.addToBackStack(null);
 			fragmentTransaction.commit();
 			( (MainActivity)getActivity() ).inVisibleButtons();

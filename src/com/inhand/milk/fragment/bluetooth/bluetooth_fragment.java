@@ -37,7 +37,7 @@ public class bluetooth_fragment extends Fragment{
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		view = inflater.inflate(R.layout.bluetooth,null);
-		listView = (ListView)view.findViewById(R.id.listView);
+		listView = (ListView)view.findViewById(R.id.detals_listView);
 		//bluetooth.openBlue();
 		//bluetooth.startSearch();
 		setButton();
