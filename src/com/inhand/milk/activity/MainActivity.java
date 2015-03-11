@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
         fragmentTransaction.commit();  
         
         
-       // bluetooth = new Bluetooth(this);
+        bluetooth = new Bluetooth(this);
        // bluetooth.openBlue();
         //bluetooth.startSearch();   
         setSlidingMenu();
@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 	     menu.setMenu(view );
 	     
 	     
-	     ListView listView = (ListView)view.findViewById(R.id.listView);
+	     ListView listView = (ListView)view.findViewById(R.id.detals_listView);
 	     List< Map<String,Object> > listitems = new ArrayList<Map<String,Object>>();
 	     Map<String, Object> map1 = new HashMap<String, Object>();
 	     Map<String, Object> map2 = new HashMap<String, Object>();

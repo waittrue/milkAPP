@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment{
 		paramsss.width = (int)(width*0.85);
 		tuisong.setLayoutParams(paramsss);
 		
-		ImageView  menubutton = (ImageView) view.findViewById(R.id.menu_entry);
+		ImageView  menubutton = (ImageView) view.findViewById(R.id.home_menu_entry);
 		menubutton.setOnClickListener(  ((MainActivity)getActivity()).getMyOnclickListener() );
 	}
 	

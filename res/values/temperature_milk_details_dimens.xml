@@ -21,6 +21,10 @@
     <dimen name="details_content_under_line_margin_left">15dp</dimen>
     
     
-   
-    <dimen name="details_back_icon_margin_left">20dp</dimen>
+    <dimen name="details_once_margin_parent_left">15dp</dimen>
+    <dimen name="details_once_title_margin_icon_left">20dp</dimen>
+    <dimen name="details_once_title_size">12sp</dimen>
+    
+    
+    
 </resources>

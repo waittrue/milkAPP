@@ -7,19 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
-
 import android.app.Activity;
 import android.bluetooth.*;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.hardware.Camera.ShutterCallback;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 
@@ -84,9 +81,8 @@ public class Bluetooth {
 		paired = selectFromBonded();
 		mArrayAdapter =  new ArrayAdapter<String>(activity.getApplicationContext(), android.R.layout.simple_list_item_1);
 	}
+	
 	public void openBlue(){
-		if(adapter == null)
-			return;
 		if(!adapter.isEnabled()){
 			Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
 			activity.startActivityForResult(enableBluetooth,REQUEST_ENABLE_BT);
@@ -94,20 +90,20 @@ public class Bluetooth {
 	}
 	
 	public void kejian(){
-		 
 		Intent discoverableIntent = new  Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
 		discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
 		activity.startActivityForResult(discoverableIntent,REQUEST_ENABLE_BT );
-		
 	}
+	
 	public boolean startSearch(){
-		if(adapter == null)
-			return false;
-		 boolean result;
-		 mArrayAdapter.clear();
-		 listdevice.clear();
+		boolean result;
+		mArrayAdapter.clear();
+		listdevice.clear();
 		activity.registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
 		result = adapter.startDiscovery();
+		if (result == false){
+			Toast.makeText(activity, "À¶ÑÀÃ»ÓÐ¿ªÆô", Toast.LENGTH_LONG).show();
+		}
 		return result;
 		 
 	}
@@ -172,8 +168,7 @@ public class Bluetooth {
 			ShutConnect();
 			acceptThread = new AcceptThread();
 			acceptThread.start();
-		}
-		
+		}	
 	}
 	
 	public void ShutConnect(){

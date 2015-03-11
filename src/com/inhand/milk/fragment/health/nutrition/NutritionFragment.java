@@ -2,12 +2,9 @@ package com.inhand.milk.fragment.health.nutrition;
 
 import com.example.aaaa.R;
 import com.inhand.milk.activity.MainActivity;
-import com.inhand.milk.fragment.temperature_milk.MilkCircle;
-
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;

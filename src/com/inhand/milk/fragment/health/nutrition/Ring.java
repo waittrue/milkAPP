@@ -2,34 +2,19 @@ package com.inhand.milk.fragment.health.nutrition;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.locks.AbstractOwnableSynchronizer;
-
-import javax.security.auth.PrivateCredentialPermission;
-
-import com.example.aaaa.R;
-import com.example.aaaa.R.array;
-
-import android.R.color;
-import android.R.integer;
-import android.app.usage.UsageEvents.Event;
+import android.animation.Animator;
+import android.animation.Animator.AnimatorListener;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
-import android.media.audiofx.Visualizer;
-import android.provider.Telephony.Mms.Addr;
-import android.renderscript.ScriptIntrinsicYuvToRGB;
-import android.support.v7.internal.view.menu.MenuDialogHelper;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
-import android.view.animation.Animation.AnimationListener;
 
 public class Ring extends ViewGroup {
 	
@@ -62,6 +47,7 @@ public class Ring extends ViewGroup {
 		this.addView(new MyText(getContext(), innerCircleR, centerText[0],
 				centerText[1], centerText[2]) );
 		setClickEvent();
+		setObjectAnimation();
 	}
 	
 	private void removeMyText(){
@@ -85,6 +71,7 @@ public class Ring extends ViewGroup {
  	private int whoClicked(float x, float y){
  		float absX = x - outerCircleR;
  		float absY = - ( y - outerCircleR );
+ 		Log.i("evet.get x y",String.valueOf(absX) + " "+String.valueOf(absY));
  		float distance =  (float) Math.sqrt( absX * absX + absY *absY);
  		if (distance < innerCircleR || distance > outerCircleR)
  			return -1;
@@ -101,12 +88,13 @@ public class Ring extends ViewGroup {
  			atan = 360 - atan;
  		else 
  			return -1;
- 	    atan = atan - sweepAngleOffset;
+ 	    //atan = atan - sweepAngleOffset;
  		if (atan < 0 )
  			atan  = atan +360;
  		else if (atan > 360)
  			atan = atan -360;
  		int count = radians.length;
+ 		Log.i("length of 2dimen", String.valueOf(count));
  		for (int i= 0; i<count;i++){
  			if (atan >= radians[i][0] && atan <= radians[i][1]){
  				currentIndex = i;
@@ -123,7 +111,9 @@ public class Ring extends ViewGroup {
 			public boolean onTouch(View v, MotionEvent event) {
 				// TODO Auto-generated method stub
 				if (event.getAction() == MotionEvent.ACTION_UP){
+					//Log.i("evet.get x y",String.valueOf(event.getX()) + " "+String.valueOf(event.getY()));
 					int index = whoClicked(event.getX(), event.getY());
+					Log.i("index",String.valueOf(index) );
 					if (index == -1)
 						return true;
 					if (index == lastIndex)
@@ -135,7 +125,6 @@ public class Ring extends ViewGroup {
 				return true;	
 			}
 		};
-		
 		this.setOnTouchListener(onTouchListener);	
 	}
 	
@@ -144,6 +133,7 @@ public class Ring extends ViewGroup {
 		if (radians[index][1] - radians[index][0] >180)
 			return;
 		
+		//RotateAnimation rAnimation = new RotateAnimation(this.getRotation(), toDegrees, pivotXType, pivotXValue, pivotYType, pivotYValue)
 		View view = views.get(index);
 		float angle = (radians[index][0] + radians[index][1] )/2;
 		//angle = 360 -angle;
@@ -153,47 +143,58 @@ public class Ring extends ViewGroup {
 		Log.i("x  or y ", String.valueOf(x )+" "+String.valueOf(y));
 		TranslateAnimation translateAnimation = new TranslateAnimation(0, x, 0, y);
 		translateAnimation.setFillAfter(true);
-		translateAnimation.setDuration(1000);
+		translateAnimation.setDuration(300);
 		view.startAnimation(translateAnimation);
 		addMyText();
 		lastIndex = index;	
 	}
-	private AnimationListener rotateAnimationListener = new AnimationListener() {
-		
-		@Override
-		public void onAnimationEnd(Animation animation) {
-			// TODO Auto-generated method stub
-			startMoveDown(currentIndex);
-		}
-
-		@Override
-		public void onAnimationStart(Animation animation) {
-			// TODO Auto-generated method stub
-			return;
-		}
-
-		@Override
-		public void onAnimationRepeat(Animation animation) {
-			// TODO Auto-generated method stub
-			return;
-		}
-	};
+	
+	private ObjectAnimator oAnimator ;
+	private void setObjectAnimation(){
+		oAnimator  = new ObjectAnimator();
+		oAnimator.setTarget(this);
+		oAnimator.setPropertyName("rotation");
+	}
+	
 	private void startMyRotateAnimation(int index){
-		if(lastIndex != -1)
+		if (lastIndex != -1)
 			views.get(lastIndex).clearAnimation();
 		
-		float temp = sweepAngleOffset;
 		float centerAngle = (radians[index][0] + radians[index][1])/2 ;
-		float sweepAngle = 90 - centerAngle;
-		sweepAngleOffset = 90 - centerAngle ;
-		if (temp > sweepAngle)
-			sweepAngle =  360 + sweepAngle;
-		RotateAnimation rotateAnimation = new RotateAnimation(temp, sweepAngle , 
-					outerCircleR , outerCircleR +distanceMoveDown);
-		rotateAnimation.setDuration( (long) (sweepAngle - temp) );
-		rotateAnimation.setFillAfter(true);
-		rotateAnimation.setAnimationListener(rotateAnimationListener);
-		this.startAnimation(rotateAnimation);
+		float time = 90 -centerAngle;
+		sweepAngleOffset = time;
+		if (time < 0) 
+			time = 360 + time;
+		oAnimator.setFloatValues(time);
+		oAnimator.setDuration( (int)time * 2);
+		AnimatorListener listener = new AnimatorListener() {
+			
+			@Override
+			public void onAnimationStart(Animator animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationRepeat(Animator animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationEnd(Animator animation) {
+				// TODO Auto-generated method stub
+				startMoveDown(currentIndex);
+			}
+			
+			@Override
+			public void onAnimationCancel(Animator animation) {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+		oAnimator.addListener(listener);
+		oAnimator.start();
 	}
 
 	@Override
@@ -219,7 +220,7 @@ public class Ring extends ViewGroup {
 			child = getChildAt(i);
 			child.layout(0, offset, child.getMeasuredWidth(), 
 					child.getMeasuredHeight() + offset );
-			Log.i("health_nutrition", String.valueOf(i)+":"+String.valueOf(child.getMeasuredWidth()));
+		//	Log.i("health_nutrition", String.valueOf(i)+":"+String.valueOf(child.getMeasuredWidth()));
 		}
 		
 		child = getChildAt(count);
@@ -270,7 +271,7 @@ public class Ring extends ViewGroup {
 			paint.setAlpha(0);
 			canvas.drawArc(rectf, 0, mStartRadian, true, paint);
 			canvas.drawArc(rectf, mEndRadian,360 - mEndRadian, true, paint);
-			Log.i("sector", String.valueOf(this.getHeight()));
+			//Log.i("sector", String.valueOf(this.getHeight()));
 			
 		}
 		

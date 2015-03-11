@@ -200,7 +200,7 @@ public class ButtonsFragment extends Fragment {
 			});
 		
 		 ImageButton button5 = (ImageButton)view.findViewById(R.id.buttons_person_center);
-		 button5.setOnClickListener(new OnClickListener() {
+		 button4.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -224,7 +224,8 @@ public class ButtonsFragment extends Fragment {
 						fragmentTransaction.hide(health);
 						break;
 				}
-				currentFragment = CurrentFragment.PERSONCENTER;
+				//currentFragment = CurrentFragment.PERSONCENTER;
+				currentFragment = CurrentFragment.HEALTH;
 				
 				if(bluetooth == null){
 					bluetooth = new bluetooth_fragment(  ((MainActivity)ButtonsFragment.this.getActivity() ).getBluetooth());

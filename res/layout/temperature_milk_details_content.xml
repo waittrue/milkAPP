@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/health_nutrition_header_layout"
+        android:id="@+id/details_content_header_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/details_content_height"
         android:background="@color/details_content_header_background_color"

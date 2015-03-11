@@ -6,7 +6,9 @@ import com.example.aaaa.R;
 import com.inhand.milk.fragment.temperature_milk.details.DetailsFragment.ItemEntity;
 import com.inhand.milk.fragment.temperature_milk.details.PinnedHeaderListView.HeadViewManager;
 
+import android.R.bool;
 import android.content.Context;
+import android.graphics.Picture;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,7 @@ public class PinnedListViewAdapter extends  BaseAdapter implements HeadViewManag
 	private List<ItemEntity> mData ;
 	private Context mContext;
 	private LayoutInflater inflater;
+	private boolean isTemperature = true;
 	//这里注意这里是应用，，所以如果我们在外面修改了mdata 这里也会改变，这个真是我们想要的哈。
 	public PinnedListViewAdapter(Context context , List<ItemEntity> data) {
 		// TODO Auto-generated constructor stub
@@ -57,7 +60,7 @@ public class PinnedListViewAdapter extends  BaseAdapter implements HeadViewManag
 			convertView = inflater.inflate(R.layout.temperature_milk_details_content, null);
 			viewHolder  = new ViewHolder();
 			viewHolder.title = (TextView)convertView.findViewById(R.id.details_content_header_date);
-			viewHolder.titleLayout = (View)convertView.findViewById(R.id.health_nutrition_header_layout);
+			viewHolder.titleLayout = (View)convertView.findViewById(R.id.details_content_header_layout);
 			viewHolder.amount = (TextView)convertView.findViewById(R.id.num);
 			viewHolder.time  = (TextView)convertView.findViewById(R.id.time);
 			viewHolder.picture = (ImageView)convertView.findViewById(R.id.one);
@@ -83,14 +86,9 @@ public class PinnedListViewAdapter extends  BaseAdapter implements HeadViewManag
 			viewHolder.layoutLine.setVisibility(View.VISIBLE);
 		//设置数据
 		String amount = mData.get(position).getAmount();
-		viewHolder.amount.setText(  amount + "ml");
+		viewHolder.amount.setText(  amount );
 		viewHolder.time.setText( mData.get(position).getTime());
-		if( Integer.parseInt(	amount ) < 100)
-			viewHolder.picture.setImageResource(R.drawable.details_amount_warning);
-		else 
-			viewHolder.picture.setImageResource(R.drawable.details_amount_normal);
-		
-		
+		viewHolder.picture.setImageDrawable(mData.get(position).getPicture());
 		return convertView;
 	}
 	

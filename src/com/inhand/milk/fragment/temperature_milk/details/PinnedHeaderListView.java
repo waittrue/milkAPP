@@ -72,10 +72,6 @@ public class PinnedHeaderListView  extends ListView{
 		}
 	}
 	
-	
-
-
-
 	@Override
 	protected void dispatchDraw(Canvas canvas) {
 		// TODO Auto-generated method stub
@@ -104,7 +100,7 @@ public class PinnedHeaderListView  extends ListView{
 			 drawHead = true;
 			 break;
 		case HeadViewManager.HEAD_VIEW_MOVE:
-			myAdapter.configureHeadView(headView, position);	
+		     myAdapter.configureHeadView(headView, position);	
 			 drawHead = true;
 			 View child =  getChildAt(0);
 			 if (child != null){
