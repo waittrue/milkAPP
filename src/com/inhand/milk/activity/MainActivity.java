@@ -126,5 +126,12 @@ public class MainActivity extends Activity {
 		return bluetooth;
 	}
 
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		bluetooth.ShutConnect();
+	}
+
 	
 }

@@ -41,7 +41,7 @@ public class bluetooth_fragment extends Fragment{
 		//bluetooth.openBlue();
 		//bluetooth.startSearch();
 		setButton();
-		  return view;
+		return view;
 	}
 
 	private void setButton(){
@@ -52,7 +52,7 @@ public class bluetooth_fragment extends Fragment{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				bluetooth.kejian();
+				bluetooth.discoverable();
 			}
 		});
 		
@@ -109,7 +109,7 @@ public class bluetooth_fragment extends Fragment{
 					editText.setText("");
 					Toast.makeText(v.getContext(),string, Toast.LENGTH_LONG).show();
 					bluetooth.sendStream( string.getBytes());
-					}
+				}
 			}
 		}); 
 		  
