@@ -2,7 +2,9 @@ package com.inhand.milk.fragment.health.nutrition;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.animation.Animator;
+import android.animation.TimeInterpolator;
 import android.animation.Animator.AnimatorListener;
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -14,7 +16,9 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
 
 public class Ring extends ViewGroup {
 	
@@ -48,6 +52,12 @@ public class Ring extends ViewGroup {
 				centerText[1], centerText[2]) );
 		setClickEvent();
 		setObjectAnimation();
+		
+		currentIndex = 0;
+		sweepAngleOffset = 90 - ( radians[0][0] + radians[0][1] )/2;
+		this.setRotation(  sweepAngleOffset);
+		startMoveDown(0, 0);
+		addMyText();
 	}
 	
 	private void removeMyText(){
@@ -129,7 +139,7 @@ public class Ring extends ViewGroup {
 	}
 	
 	
-	private void startMoveDown(int index){
+	private void startMoveDown(int index,int time){
 		if (radians[index][1] - radians[index][0] >180)
 			return;
 		
@@ -143,7 +153,7 @@ public class Ring extends ViewGroup {
 		Log.i("x  or y ", String.valueOf(x )+" "+String.valueOf(y));
 		TranslateAnimation translateAnimation = new TranslateAnimation(0, x, 0, y);
 		translateAnimation.setFillAfter(true);
-		translateAnimation.setDuration(300);
+		translateAnimation.setDuration(time);
 		view.startAnimation(translateAnimation);
 		addMyText();
 		lastIndex = index;	
@@ -159,14 +169,16 @@ public class Ring extends ViewGroup {
 	private void startMyRotateAnimation(int index){
 		if (lastIndex != -1)
 			views.get(lastIndex).clearAnimation();
-		
+		float lastSweepAngleOffset = sweepAngleOffset;
 		float centerAngle = (radians[index][0] + radians[index][1])/2 ;
-		float time = 90 -centerAngle;
+		float time = 90 - centerAngle;
 		sweepAngleOffset = time;
-		if (time < 0) 
-			time = 360 + time;
+		float rotate = this.getRotation();
+		if (time < this.getRotation()) 
+			time = (int)( (rotate - time)/360+1 )*360 + time;
 		oAnimator.setFloatValues(time);
-		oAnimator.setDuration( (int)time * 2);
+		oAnimator.setInterpolator(new AccelerateDecelerateInterpolator() );
+		oAnimator.setDuration( (int)(time - rotate) * 10);
 		AnimatorListener listener = new AnimatorListener() {
 			
 			@Override
@@ -184,7 +196,7 @@ public class Ring extends ViewGroup {
 			@Override
 			public void onAnimationEnd(Animator animation) {
 				// TODO Auto-generated method stub
-				startMoveDown(currentIndex);
+				startMoveDown(currentIndex,300);
 			}
 			
 			@Override

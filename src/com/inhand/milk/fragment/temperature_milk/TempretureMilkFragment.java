@@ -536,6 +536,7 @@ public class TempretureMilkFragment extends Fragment {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
+			//stopCircle();
 			FragmentManager fragmentManager = getFragmentManager();  
 			FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();  
 			fragmentTransaction.hide(TempretureMilkFragment.this);
@@ -547,4 +548,20 @@ public class TempretureMilkFragment extends Fragment {
 			( (MainActivity)getActivity() ).inVisibleButtons();
 		}
 	};
+	
+	private void stopCircle(){
+		if (!isTemperture){
+		switch (State) {
+		  case 0:
+			  milkCircleDay.stop();
+			  break;
+		  case 1:
+			  milkCircleWeek.stop();
+			  break;
+		  case 2:
+			  milkCircleMonth.stop();
+			  break;
+		  }
+		}
+	}
 }

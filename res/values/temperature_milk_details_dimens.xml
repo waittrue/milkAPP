@@ -20,10 +20,17 @@
     <dimen name="details_content_under_line_height">1dp</dimen>
     <dimen name="details_content_under_line_margin_left">15dp</dimen>
     
+    <dimen name="details_once_dividing_height">1dp</dimen>
     
     <dimen name="details_once_margin_parent_left">15dp</dimen>
-    <dimen name="details_once_title_margin_icon_left">20dp</dimen>
-    <dimen name="details_once_title_size">12sp</dimen>
+    <dimen name="details_once_icon_margin_parent_bottom">10dp</dimen>
+    <dimen name="details_once_text_margin_parent_bottom">13dp</dimen>
+    <dimen name="details_once_title_margin_icon_left">2dp</dimen>
+    <dimen name="details_once_title_size">15dp</dimen>
+    <dimen name="details_once_title_icon_width">25dp</dimen>
+    <dimen name="details_once_title_icon_height">25dp</dimen>
+    <dimen name="details_once_text_size">15dp</dimen>
+    <dimen name="details_once_margin_parent_right">13dp</dimen>
     
     
     

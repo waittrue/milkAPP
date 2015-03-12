@@ -33,6 +33,7 @@ public class Bluetooth {
 	private ArrayAdapter<String> mArrayAdapter; 
 	private IntentFilter filter1 = new IntentFilter(BluetoothDevice.ACTION_FOUND);
 	private IntentFilter filter2 = new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+	private IntentFilter filter3 = new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
 	private List<BluetoothDevice> listdevice = new ArrayList<BluetoothDevice>();
 	private ConnectedThread connectedThread;
 	private AcceptThread acceptThread;
@@ -66,6 +67,9 @@ public class Bluetooth {
 	        else if ( ACTION_DISCOVERY_FINISHED.equals(action) ){
 	        	Toast.makeText(activity.getApplicationContext(), "finish_discover", Toast.LENGTH_SHORT).show();
 	        	activity.unregisterReceiver(mReceiver);
+	        }
+	        else if (bluetoothAdapter.ACTION_DISCOVERY_STARTED.equals(action)){
+	        	Toast.makeText(activity, "discover start", Toast.LENGTH_SHORT).show();
 	        }
 	    }
 	};
@@ -104,6 +108,8 @@ public class Bluetooth {
 		listdevice.clear();
 		activity.registerReceiver(mReceiver, filter1); // Don't forget to unregister during onDestroyactivity.registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
 		activity.registerReceiver(mReceiver, filter2); // Don't forget to unregister during onDestroy
+		activity.registerReceiver(mReceiver, filter3);
+		Toast.makeText(activity, "准备发现模块", Toast.LENGTH_SHORT).show();
 		result = bluetoothAdapter.startDiscovery();
 		if (result == false){
 			Toast.makeText(activity, "蓝牙没有开启", Toast.LENGTH_SHORT).show();

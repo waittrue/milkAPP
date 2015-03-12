@@ -84,9 +84,12 @@ public class DetailsFragment  extends Fragment{
 				int month = calendar.get(Calendar.MONTH);
 				title = String.valueOf(month)+"ÔÂ"+String.valueOf(day)+"ÈÕ";
 				if (isTemperature == false){
-					amount = String.valueOf( (int)( Math.random() * 20 + 30 ) )+"¡ã"+"~"+
+					amount = String.valueOf( (int)( Math.random() * 20 + 30 ) )+" ~ "+
 									String.valueOf( (int)( Math.random() * 20 ) )+"¡ã";
-					picture = getResources().getDrawable(R.drawable.buttons_temperature_icon);
+					if (i / 2 == 0)
+						picture = getResources().getDrawable(R.drawable.details_temperature_normal);
+					else 
+						picture = getResources().getDrawable(R.drawable.details_temperature_warning);
 					}
 				else {
 					amount =   String.valueOf( (int)( Math.random()*150) );

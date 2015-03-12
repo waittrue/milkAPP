@@ -10,6 +10,7 @@ import com.inhand.milk.fragment.bluetooth.Bluetooth;
 import com.inhand.milk.fragment.buttons.ButtonsFragment;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
+import android.util.Log;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.os.Bundle;
@@ -130,6 +131,7 @@ public class MainActivity extends Activity {
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
+		Log.i("activity", "onDestroy");
 		bluetooth.ShutConnect();
 	}
 

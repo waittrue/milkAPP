@@ -132,18 +132,15 @@ public class MilkCircle extends View{
 	private Handler handler ;
 	private int  time;
 	private String num;
+	private Runnable runnabel;
 	
-	
-	public void start(){
-	
-		
-		
+	public void start(){	
 		handler = new Handler();
 		sweepAngle = 0;
 		score = 0;
 		score_float = 0;
 		time = 100;
-		Runnable runnabel = new Runnable() {
+		runnabel = new Runnable() {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
@@ -167,6 +164,10 @@ public class MilkCircle extends View{
 				}
 		};
 		handler.postDelayed(runnabel, 2);	
+	}
+	public void stop(){
+		if (runnabel != null)
+			handler.removeCallbacks(runnabel);
 	}
 	
 }
