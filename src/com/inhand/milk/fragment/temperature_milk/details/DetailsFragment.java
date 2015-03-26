@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.example.aaaa.R;
 import com.inhand.milk.activity.MainActivity;
+import com.inhand.milk.fragment.TitleFragment;
 import com.inhand.milk.fragment.temperature_milk.details_once.DetailsOnceFragment;
 
 import android.app.Fragment;
@@ -23,9 +24,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailsFragment  extends Fragment{
+public class DetailsFragment  extends TitleFragment{
 
-	private View view;
 	private  PinnedHeaderListView  listView;
 	private List<ItemEntity> listItem = new ArrayList<ItemEntity>();
 	private boolean isTemperature = true;
@@ -34,16 +34,19 @@ public class DetailsFragment  extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		view  = inflater.inflate(R.layout.temperature_milk_details,container, false);
-		listView = (PinnedHeaderListView)view.findViewById(R.id.detals_listView);
+		mView  = inflater.inflate(R.layout.temperature_milk_details,container, false);
+		if (!isTemperature)
+			setTitleview(getString(R.string.details_milk_title_string), 2);
+		else 
+			setTitleview(getString(R.string.details_temperature_title_string), 2);
+		listView = (PinnedHeaderListView)mView.findViewById(R.id.detals_listView);
 		listView.setHeadView(getHeadView());
 		getData();
 		PinnedListViewAdapter adapter = new PinnedListViewAdapter(this.getActivity().getApplicationContext(),
 								listItem);
 		listView.setAdapter( adapter);
-		setBack();
 		setItemOnclick();
-		return view;
+		return mView;
 	}
 	public void setTemperature(boolean aa) {
 		this.isTemperature = aa;
@@ -57,17 +60,7 @@ public class DetailsFragment  extends Fragment{
 	private View getHeadView(){
 		View headview ;
 		LayoutInflater inflater = getActivity().getLayoutInflater();
-		headview = inflater.inflate(R.layout.temperature_milk_details_header, listView,false);
-		TextView textView = (TextView)view.findViewById(R.id.details_header_layout);
-		if (isTemperature){
-			String string = getString(R.string.details_temperature_title_string);
-			textView.setText(string);
-		}
-		else {
-			String string = getString(R.string.details_milk_title_string);
-			textView.setText(string);
-		}
-			
+		headview = inflater.inflate(R.layout.temperature_milk_details_header, listView,false);	
 		return headview;
 	}
 	
@@ -106,27 +99,8 @@ public class DetailsFragment  extends Fragment{
 			}
 		}
 	
-
-	
-	
-	private void setBack(){
-		ImageView back = (ImageView)view.findViewById(R.id.details_back);
-		back.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				FragmentManager fragmentManager = getFragmentManager();  
-				FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();  
-				fragmentManager.popBackStack();
-				( (MainActivity) getActivity()).visibleButtons();
-			}
-		});
-		
-	}
-	
 	private void setItemOnclick(){
-		PinnedHeaderListView listView = (PinnedHeaderListView)view.findViewById(R.id.detals_listView);
+		PinnedHeaderListView listView = (PinnedHeaderListView)mView.findViewById(R.id.detals_listView);
 		OnItemClickListener listener = new OnItemClickListener() {
 
 			@Override

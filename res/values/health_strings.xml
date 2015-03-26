@@ -9,4 +9,11 @@
         <item >健康提示</item>
     </string-array>
     
+    <string-array name="health_item_doc">
+        <item >生日：2014-08-08/性别：女</item>
+        <item >蛋白质：14g/钙：12g</item>
+        <item >饮奶温度，饮奶量</item>
+        <item >我们错过了就没有回头</item>
+    </string-array>
+    
 </resources>

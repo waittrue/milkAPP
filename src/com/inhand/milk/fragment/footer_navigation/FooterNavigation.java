@@ -1,31 +1,29 @@
-package com.inhand.milk.fragment.buttons;
+package com.inhand.milk.fragment.footer_navigation;
 
 import com.example.aaaa.R;
-import com.inhand.milk.activity.MainActivity;
 import com.inhand.milk.fragment.bluetooth.bluetooth_fragment;
 import com.inhand.milk.fragment.health.HealthFragment;
 import com.inhand.milk.fragment.home.HomeFragment;
-import com.inhand.milk.fragment.temperature_milk.TempretureMilkFragment;
-
+import com.inhand.milk.fragment.temperature_milk.AmountStatistics;
+import com.inhand.milk.fragment.temperature_milk.TemperatureStatistics;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
-public class ButtonsFragment extends Fragment {
+public class FooterNavigation extends Fragment {
 
 	private View view;
-	private TempretureMilkFragment tempreture,amount;
+	private TemperatureStatistics tempreture;
+	private AmountStatistics amount;
 	private bluetooth_fragment bluetooth;
 	private HomeFragment home;
 	private HealthFragment health;
-	private CurrentFragment currentFragment = CurrentFragment.HOME; 
+	private FooterButtonsManager buttonsManager ;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +31,7 @@ public class ButtonsFragment extends Fragment {
 		// TODO Auto-generated method stub
 		view  = inflater.inflate(R.layout.buttons, null);
 		Log.i("buttons", "oncreateview");
+		initButtons();
 		return view;
 	}
 	@Override
@@ -40,11 +39,11 @@ public class ButtonsFragment extends Fragment {
 		// TODO Auto-generated method stub
 		super.onStart();
 		Log.i("buttons", "onStart");
-		attchHome();
-		initButtons();
+		//attachHome();
+		
 	}
-	
-	private void attchHome(){
+	/*
+	private void attachHome(){
 		FragmentManager  fragmentManager = getFragmentManager();  
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		if (home ==null)
@@ -227,7 +226,7 @@ public class ButtonsFragment extends Fragment {
 				currentFragment = CurrentFragment.PERSONCENTER;
 				
 				if(bluetooth == null){
-					bluetooth = new bluetooth_fragment(  ((MainActivity)ButtonsFragment.this.getActivity() ).getBluetooth());
+					bluetooth = new bluetooth_fragment(  ((MainActivity)FooterNavigation.this.getActivity() ).getBluetooth());
 					fragmentTransaction.add(R.id.Activity_fragments_container, bluetooth,"BLUETOOTH");
 				}
 				else {
@@ -238,10 +237,33 @@ public class ButtonsFragment extends Fragment {
 		});
 		 
 	}
-	
-	private enum CurrentFragment{
-		HOME,TEMPERATURE,AMOUNT,HEALTH,PERSONCENTER
-	} 
+	*/
+	private void initButtons(){
+		FragmentManager fragmentManager = getFragmentManager();
+		buttonsManager = new FooterButtonsManager( fragmentManager);
+		tempreture = new TemperatureStatistics();
+		amount = new AmountStatistics();
+		health = new HealthFragment();
+		home = new HomeFragment();
+		//bluetooth = new bluetooth_fragment(((MainActivity)FooterNavigation.this.getActivity() ).getBluetooth() );
+		ImageButton button ;
+		button = (ImageButton)view.findViewById(R.id.buttons_home);
+		buttonsManager.addButtons(button,home);
+		buttonsManager.setStartFragment(button);
+		
+		button = (ImageButton)view.findViewById(R.id.buttons_temperature_icon);
+		buttonsManager.addButtons(button,tempreture);
+		
+		button = (ImageButton)view.findViewById(R.id.buttons_milk_icon);
+		buttonsManager.addButtons(button,amount);
+		
+		button = (ImageButton)view.findViewById(R.id.buttons_health);
+		buttonsManager.addButtons(button,health);	
+		
+		//button = (ImageButton)view.findViewById(R.id.buttons_person_center);
+		//buttonsManager.addButtons(button,bluetooth);		
+	}
+
 }
 	
 	

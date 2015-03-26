@@ -1,4 +1,4 @@
-package com.inhand.milk.fragment.health.nutrition;
+package com.inhand.milk.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.Toast;
 
-public class Ring extends ViewGroup {
+public class HealthNutritionDisk extends ViewGroup {
 	
 	private int[] colors = {Color.rgb(0, 255, 0),Color.rgb(255, 0, 0),Color.rgb(0, 0, 255)};
 	private float[][]  radians = {{0,100},{100,200},{200,360}};
@@ -34,7 +34,7 @@ public class Ring extends ViewGroup {
 	float distanceMoveDown = 20;
 	String[] centerText = {"总摄入","368克","查看详情"};
 	String[] centerText2 = {"总摄入","390克","查看详情"};
-	public Ring(Context context ,float r) {
+	public HealthNutritionDisk(Context context ,float r) {
 		// TODO Auto-generated constructor stub
 		super(context);
 		outerCircleR = r;

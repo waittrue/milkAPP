@@ -5,23 +5,23 @@
       android:layout_height="match_parent"
       android:orientation="vertical" >
 
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight = "1"
-                    android:background="@drawable/temperature_milk_circle_background"
-                    android:orientation="horizontal" >
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/temperature_milk_circle_background"
+          android:orientation="horizontal" >
 
-                    <LinearLayout
-                        android:id="@+id/temperature_milk_circle_container"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:orientation="vertical" >
-                    </LinearLayout>
-                </RelativeLayout>
+          <LinearLayout
+              android:id="@+id/temperature_milk_circle_container"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:gravity="center_vertical|center_horizontal"
+              android:orientation="vertical" >
+          </LinearLayout>
+      </RelativeLayout>
 
                 <ImageView
                     android:layout_width="fill_parent"

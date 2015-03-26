@@ -1,6 +1,7 @@
 package com.inhand.milk.fragment.temperature_milk.details_once;
 
 import com.example.aaaa.R;
+import com.inhand.milk.fragment.TitleFragment;
 
 import android.R.string;
 import android.app.Fragment;
@@ -14,51 +15,36 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailsOnceFragment extends Fragment{
-	private View view;
+public class DetailsOnceFragment extends TitleFragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		view =  inflater.inflate(R.layout.temperature_milk_details_once, null);
-		setBack();
+		mView =  inflater.inflate(R.layout.temperature_milk_details_once, null);
+		//setBack();
+		setTitleview(getString(R.string.details_once_title_string), 2);
 		setInfo();
-		return view;
+		return mView;
 	}
 	
-	private void setBack(){
-		ImageView back = (ImageView)view.findViewById(R.id.details_once_back);
-		OnClickListener onClickListener = new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				FragmentManager fragmentManager = getFragmentManager();
-				FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-				fragmentManager.popBackStack();
-				fragmentTransaction.commit();
-			}
-		};
-		back.setOnClickListener(onClickListener);
-	}
 	
 	private void setInfo(){
-		TextView textView = (TextView)view.findViewById(R.id.details_once_real_amount_num);
+		TextView textView = (TextView)mView.findViewById(R.id.details_once_real_amount_num);
 		textView.setText(getRealAmount());
 		
-		textView = (TextView)view.findViewById(R.id.details_once_advise_amount_num);
+		textView = (TextView)mView.findViewById(R.id.details_once_advise_amount_num);
 		textView.setText(getAdviseAmount());
 		
-		textView = (TextView)view.findViewById(R.id.details_once_temperature_start_num);
+		textView = (TextView)mView.findViewById(R.id.details_once_temperature_start_num);
 		textView.setText( getStartTemperature());
 		
-		textView = (TextView)view.findViewById(R.id.details_once_temperature_end_num);
+		textView = (TextView)mView.findViewById(R.id.details_once_temperature_end_num);
 		textView.setText( getEndTemperature());
 		
-		textView = (TextView)view.findViewById(R.id.details_once_health_num);
+		textView = (TextView)mView.findViewById(R.id.details_once_health_num);
 		textView.setText( getHealthNum());
 		
-		textView = (TextView)view.findViewById(R.id.details_once_end_time_num);
+		textView = (TextView)mView.findViewById(R.id.details_once_end_time_num);
 		textView.setText( getEndTime());
 	}
 	private String getRealAmount(){

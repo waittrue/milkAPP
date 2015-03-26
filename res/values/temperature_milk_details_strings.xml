@@ -11,5 +11,6 @@
     <string name="details_once_temperature_end">结束饮奶温度</string>
     <string name="details_once_health">本次健康指数</string>
     <string name="details_once_end_time">饮奶结束时间</string>
+
     
 </resources>

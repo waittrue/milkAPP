@@ -58,8 +58,8 @@ public class Excle extends View{
 	public void clearData(){
 		orignalLineData.clear();
 	}
-	 public void addLine(List<float[]> p){
-		 orignalLineData.add(p);
+	 public void addLine(List<List<float[]>> data){
+		 orignalLineData = data;
 		
 	 }
 	 
