@@ -15,7 +15,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/health_nutrition_time_navigation" >
+        android:layout_height="@dimen/health_nutrition_time_navigation_height" >
 
         <TextView
             android:id="@+id/health_nutrition_time_now"

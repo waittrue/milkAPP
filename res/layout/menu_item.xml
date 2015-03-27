@@ -8,8 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/menu_item_height" >
 
-       
-
         <ImageView
             android:id="@+id/menu_image"
             android:layout_width="@dimen/menu_item_icon_width"
@@ -25,7 +23,7 @@
              android:layout_height="wrap_content"
              android:layout_centerVertical="true"
              android:layout_toRightOf="@+id/menu_image"
-             android:textColor="@color/menu_text_color"
+             android:textColor="@color/menu_item_text_color"
              android:layout_marginLeft="@dimen/menu_item_text_margin_left_icon"
              android:textSize="@dimen/menu_item_text_size" />
 

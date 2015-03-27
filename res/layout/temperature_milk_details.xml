@@ -14,7 +14,7 @@
     </LinearLayout>
     
       
-    <com.inhand.milk.fragment.temperature_milk.details.PinnedHeaderListView
+    <com.inhand.milk.fragment.temperature_amount.details.PinnedHeaderListView
         android:id="@+id/detals_listView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -22,6 +22,6 @@
         android:background="#ffffffff"
         android:divider="#ffffffff"
         android:headerDividersEnabled="true" >
-    </com.inhand.milk.fragment.temperature_milk.details.PinnedHeaderListView>
+    </com.inhand.milk.fragment.temperature_amount.details.PinnedHeaderListView>
 
 </LinearLayout>

@@ -4,8 +4,9 @@ import com.example.aaaa.R;
 import com.inhand.milk.fragment.bluetooth.bluetooth_fragment;
 import com.inhand.milk.fragment.health.HealthFragment;
 import com.inhand.milk.fragment.home.HomeFragment;
-import com.inhand.milk.fragment.temperature_milk.AmountStatistics;
-import com.inhand.milk.fragment.temperature_milk.TemperatureStatistics;
+import com.inhand.milk.fragment.temperature_amount.AmountStatistics;
+import com.inhand.milk.fragment.temperature_amount.TemperatureStatistics;
+
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;

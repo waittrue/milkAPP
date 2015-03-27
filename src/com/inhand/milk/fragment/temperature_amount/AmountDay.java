@@ -1,4 +1,4 @@
-package com.inhand.milk.fragment.temperature_milk;
+package com.inhand.milk.fragment.temperature_amount;
 
 import java.util.ArrayList;
 import java.util.List;

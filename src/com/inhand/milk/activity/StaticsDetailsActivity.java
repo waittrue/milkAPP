@@ -1,7 +1,7 @@
 package com.inhand.milk.activity;
 
 import com.example.aaaa.R;
-import com.inhand.milk.fragment.temperature_milk.details.DetailsFragment;
+import com.inhand.milk.fragment.temperature_amount.details.DetailsFragment;
 
 import android.os.Bundle;
 

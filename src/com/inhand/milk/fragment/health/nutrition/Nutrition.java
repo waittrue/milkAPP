@@ -18,7 +18,7 @@ public class Nutrition extends TitleFragment{
 		// TODO Auto-generated method stub
 		mView =  inflater.inflate(R.layout.health_nutrition, container, false);
 		addRing();
-		setTitleview(getResources().getString(R.string.health_nutrition), 2);
+		setTitleview(getResources().getString(R.string.health_nutrition_title), 2);
 		//setBackEvent();
 		return mView;
 	}

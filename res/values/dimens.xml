@@ -1,30 +1,92 @@
 <resources>
+     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    
+    <!-- main_title -->
 	<dimen name="main_title_height">75dp</dimen>
     <dimen name="main_title_text_size">18sp</dimen>
     <dimen name="main_title_margin_top">8dp</dimen>
     
+    <!-- minor_title -->
     <dimen name="minor_title_height">70dp</dimen>
-     <dimen name="minor_title_margin_top">4dp</dimen>
+    <dimen name="minor_title_margin_top">4dp</dimen>
     
+    <!-- menu_icon_settings -->
     <dimen name="menu_margin_left">16dp</dimen>
     <dimen name="menu_entry_height">30dp</dimen>
   
-    
+     <!-- menu_icon_settings -->
     <dimen name="back_icon_width">50dp</dimen>
     <dimen name="back_icon_height">18dp</dimen>
     <dimen name="back_icon_margin_left">20dp</dimen>
     
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">0dp</dimen>
-    <dimen name="activity_vertical_margin">0dp</dimen>
-     
- 	 <dimen name="activity_buttons_fragment_height">50dp</dimen>
-  
-   
-     <dimen name="buttons_icon_size">35dp</dimen>
+   	<!-- footer_navigation_fragment -->
+ 	<dimen name="footer_navigation_fragment_height">50dp</dimen>
+    <dimen name="buttons_icon_size">35dp</dimen>
     
-       <dimen name="details_text_size">20dp</dimen>
-       
+    <!-- health_item  -->
+    <dimen name="health_item_height">60dp</dimen>
+    <dimen name="health_item_icon_name_height">45dp</dimen>
+    <dimen name="health_item_icon_name_width">45dp</dimen>
+    <dimen name="health_item_icon_name_margin_left">20dp</dimen>
+    <dimen name="health_item_texts_container_height">35dp</dimen>
+    <dimen name="health_item_texts_container_margin_icon_left">10dp</dimen>
+    <dimen name="health_item_text_name_size">14sp</dimen>
+    <dimen name="health_item_text_details_size">10sp</dimen>
+    <dimen name="health_item_icon_arrow_height">12dp</dimen>
+    <dimen name="health_item_icon_arrow_width">12dp</dimen>
+    <dimen name="health_item_icon_arrow_margin_right">10dp</dimen>
+    <dimen name="health_item_dividing_line_height">1px</dimen>
+    <dimen name="health_item_dividing_line_margin_left">65dp</dimen>
+    <string-array name="health_item_name">
+        <item >宝宝信息</item>
+        <item >营养摄入</item>
+        <item >数据统计</item>
+        <item >健康提示</item>
+    </string-array>
+    
+    <string-array name="health_item_doc">
+        <item >生日：2014-08-08/性别：女</item>
+        <item >蛋白质：14g/钙：12g</item>
+        <item >饮奶温度，饮奶量</item>
+        <item >我们错过了就没有回头</item>
+    </string-array>
+    
+    
+     <!-- health_item nutrition  -->
+    <dimen name="health_nutrition_time_navigation_height">40dp</dimen>
+    <dimen name="health_nutrition_time_now_text_size">15sp</dimen>
+    
+    <!-- home fragment  -->
+    <dimen name="home_advise_layout_width">105dp</dimen>
+    <dimen name="home_advise_layout_height">120dp</dimen>
+    <dimen name="home_advise_margin_top">35dp</dimen>
+    <dimen name="home_advise_text_margin_top">6dp</dimen>
+    <dimen name="home_advise_text_size">14sp</dimen>
+    <dimen name="home_advise_num_size">20sp</dimen>
+    <dimen name="home_advise_text_margin_left">6dp</dimen>
+    <dimen name="home_advise_num_margin_bottom">-4dp</dimen>
+    
+    <!--  menu item  -->
+    <dimen name="menu_item_height">50dp</dimen>
+    <dimen name="menu_item_icon_height">30dp</dimen>
+    <dimen name="menu_item_icon_width">30dp</dimen>
+    <dimen name="menu_item_icon_margin_left">20dp</dimen>
+    <dimen name="menu_item_text_margin_left_icon">10dp</dimen>
+    <dimen name="menu_item_text_size">15sp</dimen>
+    
+    <!-- menu head -->
+    <dimen name="menu_head_height">100dp</dimen>
+    <dimen name="menu_head_icon_width">60dp</dimen>
+    <dimen name="menu_head_icon_height">60dp</dimen>
+    <dimen name="menu_head_icon_margin_left">30dp</dimen>
+    <dimen name="menu_head_icon_margin_bottom">30dp</dimen>
+    <dimen name="menu_head_text_margin_left_icon">20dp</dimen>
+    <dimen name="menu_head_name_text_size">15dp</dimen>
+    <dimen name="menu_head_id_text_size">14dp</dimen>
+    <dimen name="menu_head_under_line_height">1px</dimen>
+    <dimen name="menu_head_under_line_margin_left">25dp</dimen>
       
        
 </resources>

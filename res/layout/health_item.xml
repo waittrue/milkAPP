@@ -20,9 +20,9 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/health_item_text_container_height"
+            android:layout_height="@dimen/health_item_texts_container_height"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/health_item_text_container_margin_icon_left"
+            android:layout_marginLeft="@dimen/health_item_texts_container_margin_icon_left"
             android:layout_toRightOf="@id/health_item_icon_container"
             android:orientation="vertical" >
 
@@ -34,7 +34,7 @@
                 android:layout_alignParentTop="true"
                 android:singleLine="true"
                 android:text="宝宝信息"
-                android:textColor="@color/health_item_name_color"
+                android:textColor="@color/health_item_name_text_color"
                 android:textSize="@dimen/health_item_text_name_size" />
 
             <TextView
@@ -45,7 +45,7 @@
                 android:layout_alignParentLeft="true"
                 android:singleLine="true"
                 android:text="生日：2014-05-06/性别：女"
-                android:textColor="@color/health_item_details_color"
+                android:textColor="@color/health_item_details_text_color"
                 android:textSize="@dimen/health_item_text_details_size" />
 
         </RelativeLayout>
@@ -74,7 +74,7 @@
                	android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:src="@color/health_listview_dividing_line_color" />
+                android:src="@color/health_item_dividing_line_color" />
 
         </LinearLayout>
 

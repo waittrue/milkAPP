@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<!-- app settings -->
     <string name="app_name">aaaa</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+	
+    <!-- health nutrition -->
+    <string name="health_nutrition_title">饮奶营养成分</string>
+    
+    <!-- home fragment -->
+    <string name="home_circle_doc">查看更多历史分数</string>
+    <string name="home_title_text">饮奶综合评分</string>
+    <string name="home_advise_left_title">上次用量： </string>
+    <string name="home_advise_right_title">建议用量： </string>
+    <string name="home_advise_second_title">奶量： </string>
+    <string name="home_advise_third_title">温度： </string>
 </resources>

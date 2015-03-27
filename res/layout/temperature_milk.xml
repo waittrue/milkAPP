@@ -7,7 +7,7 @@
     <LinearLayout
               android:layout_width="fill_parent"
               android:layout_height="@dimen/main_title_height"
-               android:background="@drawable/temperature_milk_title_background"
+               android:background="@drawable/temperature_amount_title_background"
               android:orientation="vertical" >
 
         <LinearLayout
@@ -93,7 +93,7 @@
                 android:id="@+id/temperature_milk_time_line_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/temperature_milk_time_line_height"
-                android:background="@drawable/temperature_time_line_background"
+                android:background="@drawable/temperature_amount_time_line_background"
                 android:orientation="horizontal" >
             </LinearLayout>
         </LinearLayout>

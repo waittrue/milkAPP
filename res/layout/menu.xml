@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_title_height" >
+        android:layout_height="@dimen/menu_head_height" >
 
         <ImageView
             android:id="@+id/menu_image_container"

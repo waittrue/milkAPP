@@ -1,4 +1,4 @@
-package com.inhand.milk.fragment.temperature_milk.details;
+package com.inhand.milk.fragment.temperature_amount.details;
 
 import android.R.integer;
 import android.content.Context;

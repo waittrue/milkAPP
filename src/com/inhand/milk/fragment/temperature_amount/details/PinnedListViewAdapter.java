@@ -1,10 +1,10 @@
-package com.inhand.milk.fragment.temperature_milk.details;
+package com.inhand.milk.fragment.temperature_amount.details;
 
 import java.util.List;
 
 import com.example.aaaa.R;
-import com.inhand.milk.fragment.temperature_milk.details.DetailsFragment.ItemEntity;
-import com.inhand.milk.fragment.temperature_milk.details.PinnedHeaderListView.HeadViewManager;
+import com.inhand.milk.fragment.temperature_amount.details.DetailsFragment.ItemEntity;
+import com.inhand.milk.fragment.temperature_amount.details.PinnedHeaderListView.HeadViewManager;
 
 import android.R.bool;
 import android.content.Context;

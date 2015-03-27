@@ -1,4 +1,4 @@
-package com.inhand.milk.fragment.temperature_milk.details;
+package com.inhand.milk.fragment.temperature_amount.details;
 
 
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.List;
 import com.example.aaaa.R;
 import com.inhand.milk.activity.MainActivity;
 import com.inhand.milk.fragment.TitleFragment;
-import com.inhand.milk.fragment.temperature_milk.details_once.DetailsOnceFragment;
+import com.inhand.milk.fragment.temperature_amount.details_once.DetailsOnceFragment;
 
 import android.app.Fragment;
 import android.app.FragmentManager;

@@ -16,7 +16,6 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/home_background_color"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -92,7 +91,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_left_third_title"
-                        android:layout_marginBottom="-4dp"
+                        android:layout_marginBottom="@dimen/home_advise_num_margin_bottom"
                         android:layout_toRightOf="@id/home_left_third_title"
                         android:text="36.5°C"
                         android:textColor="@color/home_advise_left_num_color"
@@ -103,7 +102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_left_second_title"
-                        android:layout_marginBottom="-4dp"
+                        android:layout_marginBottom="@dimen/home_advise_num_margin_bottom"
                         android:layout_toRightOf="@id/home_left_second_title"
                         android:text="160ML"
                         android:textColor="@color/home_advise_left_num_color"
@@ -163,7 +162,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_right_second_title"
-                        android:layout_marginBottom="-4dp"
+                        android:layout_marginBottom="@dimen/home_advise_num_margin_bottom"
                         android:layout_toRightOf="@id/home_right_second_title"
                         android:text="100ML"
                         android:textColor="@color/home_advise_right_num_color"
@@ -174,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/home_right_third_title"
-                        android:layout_marginBottom="-4dp"
+                        android:layout_marginBottom="@dimen/home_advise_num_margin_bottom"
                         android:layout_toRightOf="@id/home_right_third_title"
                         android:gravity="bottom|left"
                         android:text="40.6°C"

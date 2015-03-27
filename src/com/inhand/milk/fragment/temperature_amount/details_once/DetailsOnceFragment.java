@@ -1,4 +1,4 @@
-package com.inhand.milk.fragment.temperature_milk.details_once;
+package com.inhand.milk.fragment.temperature_amount.details_once;
 
 import com.example.aaaa.R;
 import com.inhand.milk.fragment.TitleFragment;

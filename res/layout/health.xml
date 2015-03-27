@@ -18,7 +18,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/health_listview_color"
-        android:divider="@color/health_listview_color"
         android:dividerHeight="0dp" >
     </ListView>
 
