@@ -68,7 +68,7 @@ public class Circle extends View{
 		paint.setAntiAlias(true);
 		paint.setStrokeWidth(paintWidth);
 		
-		paint.setColor( getResources().getColor(R.color.circle_outermost) );
+		paint.setColor( getResources().getColor(R.color.home_circle_outermost) );
 		paint.setStyle(Style.STROKE); 
 		canvas.drawCircle(x, y, r, paint);
 		
@@ -76,17 +76,17 @@ public class Circle extends View{
 	    paint.setStrokeWidth(1);
 	    
 	    
-		paint.setColor(  getResources().getColor(R.color.circle_inner_outermost));
+		paint.setColor(  getResources().getColor(R.color.home_circle_inner_outermost));
 		canvas.drawCircle(x, y, r-paintWidth/2, paint);
 		
 		
 		 float tempr =  wr * 312f / 366;
-		 paint.setColor( getResources().getColor(R.color.circle_inner_outer_second));
+		 paint.setColor( getResources().getColor(R.color.home_circle_inner_outer_second));
 		 canvas.drawCircle(x, y, tempr, paint);
 		 
 		 
 		 tempr= wr * 266f / 366;       
-		 paint.setColor( getResources().getColor(R.color.circle_inner_outer_third));
+		 paint.setColor( getResources().getColor(R.color.home_circle_inner_outer_third));
 		 canvas.drawCircle(x, y, tempr, paint);
 		 
 		
@@ -221,10 +221,10 @@ public class Circle extends View{
 	private void drawText(Canvas canvas){
 		Paint paint = new Paint();
 		String doc =  getResources().getString(R.string.home_circle_doc);
-		int lowScore = getResources().getColor(R.color.low_score_color);
-		int highScore = getResources().getColor(R.color.high_score_color);
-		int fen = getResources().getColor(R.color.fen_color);
-		int docColor = getResources().getColor(R.color.doc_color);
+		int lowScore = getResources().getColor(R.color.home_low_score_color);
+		int highScore = getResources().getColor(R.color.home_high_score_color);
+		int fen = getResources().getColor(R.color.home_fen_color);
+		int docColor = getResources().getColor(R.color.home_doc_color);
 		float[] pos = new float[doc.length()*2];
 		
 		

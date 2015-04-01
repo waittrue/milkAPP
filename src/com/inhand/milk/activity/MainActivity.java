@@ -4,15 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import com.example.aaaa.R;
 import com.inhand.milk.fragment.bluetooth.Bluetooth;
-import com.inhand.milk.fragment.buttons.ButtonsFragment;
+import com.inhand.milk.fragment.footer_navigation.FooterNavigation;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-
 import android.util.Log;
 import android.view.View.OnClickListener;
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,9 +19,9 @@ import android.widget.SimpleAdapter;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivty {
 	 
-	private ButtonsFragment buttons  ;
+	private FooterNavigation buttons  ;
 	private Bluetooth bluetooth ;
 	private SlidingMenu menu;
 	@Override
@@ -33,12 +30,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 	    FragmentManager fragmentManager = getFragmentManager();  
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();  
-		buttons = new ButtonsFragment();
+		buttons = new FooterNavigation();
 		fragmentTransaction.add(R.id.Activity_buttons_fragments_container, buttons,"buttons"); 
         fragmentTransaction.commit();  
         
         
-        bluetooth = new Bluetooth(this);
+       // bluetooth = new Bluetooth(this);
        // bluetooth.openBlue();
         //bluetooth.startSearch();   
         setSlidingMenu();
@@ -132,7 +129,8 @@ public class MainActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onDestroy();
 		Log.i("activity", "onDestroy");
-		bluetooth.ShutConnect();
+		if (bluetooth != null)
+			bluetooth.ShutConnect();
 	}
 
 	

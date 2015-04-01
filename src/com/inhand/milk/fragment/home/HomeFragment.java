@@ -2,6 +2,7 @@ package com.inhand.milk.fragment.home;
 
 import com.example.aaaa.R;
 import com.inhand.milk.activity.MainActivity;
+import com.inhand.milk.fragment.TitleFragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class HomeFragment extends Fragment{
+public class HomeFragment extends TitleFragment{
 	
 	private Circle circle;
 	private float  width;
@@ -22,9 +23,10 @@ public class HomeFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,  
             Bundle savedInstanceState) {  
         // ---Inflate the layout for this fragment---  
-        View view = inflater.inflate(R.layout.home, container, false);
-        setHome(view);
-        return view;
+        mView = inflater.inflate(R.layout.home, container, false);
+        setTitleview(getString(R.string.home_title_text), 0);
+        setHome(mView);
+        return mView;
     }  
 
 	
@@ -49,9 +51,10 @@ public class HomeFragment extends Fragment{
 		LinearLayout.LayoutParams paramsss = (LinearLayout.LayoutParams) tuisong.getLayoutParams();
 		paramsss.width = (int)(width*0.85);
 		tuisong.setLayoutParams(paramsss);
-		
-		ImageView  menubutton = (ImageView) view.findViewById(R.id.home_menu_entry);
-		menubutton.setOnClickListener(  ((MainActivity)getActivity()).getMyOnclickListener() );
+	}
+	
+	public void refresh(){
+		circle.start();
 	}
 	
 	

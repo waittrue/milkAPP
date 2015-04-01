@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_title_height" >
+        android:layout_height="@dimen/menu_head_height" >
 
         <ImageView
             android:id="@+id/menu_image_container"
@@ -27,7 +27,7 @@
             android:layout_marginLeft="@dimen/menu_head_text_margin_left_icon"
             android:layout_toRightOf="@+id/menu_image_container"
             android:text="宝宝妈妈"
-            android:textColor="@color/menu_text_color"
+            android:textColor="@color/menu_head_text_color"
             android:textSize="@dimen/menu_head_name_text_size" />
 
         <TextView
@@ -38,7 +38,7 @@
             android:layout_alignLeft="@+id/menu_title_name"
             android:singleLine="true"
             android:text="奶瓶账号:JJD22446"
-            android:textColor="@color/menu_text_color"
+            android:textColor="@color/menu_head_text_color"
             android:textSize="@dimen/menu_head_id_text_size" />
 
         <LinearLayout

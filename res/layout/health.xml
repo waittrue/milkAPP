@@ -3,34 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    <RelativeLayout
+
+    <LinearLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/main_title_height"
-        android:background="@drawable/main_title_background"
-        >
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/health_title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/main_title_margin_top"
-            android:text="@string/health_title_text"
-            android:textColor="@color/main_title_text_color"
-            android:textSize="@dimen/main_title_text_size" />
-
-        <ImageView
-            android:id="@+id/home_menu_entry"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/menu_entry_height"
-            android:layout_alignParentLeft="true"
-            android:layout_alignTop="@+id/health_title_text"
-            android:layout_marginLeft="@dimen/menu_margin_left"
-            android:src="@drawable/menu_entry" />
-
-    </RelativeLayout>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/health_listview"
@@ -38,7 +18,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/health_listview_color"
-        android:divider="@color/health_listview_color"
         android:dividerHeight="0dp" >
     </ListView>
 

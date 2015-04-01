@@ -17,8 +17,11 @@ public final class R {
         public static final int abc_slide_out_top=0x7f040005;
     }
     public static final class array {
+        public static final int health_item_doc=0x7f0c0001;
         public static final int health_item_name=0x7f0c0000;
-        public static final int menu_item_texts=0x7f0c0001;
+        /**  menu  
+         */
+        public static final int menu_item_texts=0x7f0c0002;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -1524,34 +1527,33 @@ containing a value of this type.
         public static final int bright_foreground_material_light=0x7f070015;
         public static final int button_material_dark=0x7f070010;
         public static final int button_material_light=0x7f070011;
-        public static final int circle_inner_outer_second=0x7f070039;
-        public static final int circle_inner_outer_third=0x7f07003a;
-        public static final int circle_inner_outermost=0x7f070038;
-        public static final int circle_outermost=0x7f070037;
-        public static final int color_white=0x7f070045;
-        public static final int details_content_amount_text_color=0x7f070055;
-        public static final int details_content_background_color=0x7f070058;
-        public static final int details_content_header_background_color=0x7f070052;
-        public static final int details_content_header_dividing_line_color=0x7f070053;
-        public static final int details_content_header_text_color=0x7f070054;
-        public static final int details_content_time_text_color=0x7f070056;
-        public static final int details_content_under_line_color=0x7f070057;
-        public static final int details_once_item_background_color=0x7f07005a;
-        public static final int details_once_text_color=0x7f07005b;
-        public static final int details_once_title_background_color=0x7f07005c;
-        public static final int details_once_title_color=0x7f070059;
+        public static final int color_white=0x7f07005c;
+        public static final int details_content_amount_text_color=0x7f070054;
+        public static final int details_content_background_color=0x7f070057;
+        /**  tempreture_amount details 
+         */
+        public static final int details_content_header_background_color=0x7f070051;
+        public static final int details_content_header_dividing_line_color=0x7f070052;
+        public static final int details_content_header_text_color=0x7f070053;
+        public static final int details_content_time_text_color=0x7f070055;
+        public static final int details_content_under_line_color=0x7f070056;
+        public static final int details_once_item_background_color=0x7f070059;
+        public static final int details_once_text_color=0x7f07005a;
+        public static final int details_once_title_background_color=0x7f07005b;
+        public static final int details_once_title_color=0x7f070058;
         public static final int dim_foreground_disabled_material_dark=0x7f07001c;
         public static final int dim_foreground_disabled_material_light=0x7f07001d;
         public static final int dim_foreground_material_dark=0x7f07001a;
         public static final int dim_foreground_material_light=0x7f07001b;
-        public static final int doc_color=0x7f07003e;
-        public static final int fen_color=0x7f07003d;
-        public static final int health_item_details_color=0x7f070033;
-        public static final int health_item_name_color=0x7f070032;
-        public static final int health_listview_color=0x7f070034;
-        public static final int health_listview_dividing_line_color=0x7f070035;
+        public static final int health_item_details_text_color=0x7f070033;
+        public static final int health_item_dividing_line_color=0x7f070034;
+        /**  health colors 
+         */
+        public static final int health_item_name_text_color=0x7f070032;
+        public static final int health_listview_color=0x7f070035;
+        /**  health nutrition
+         */
         public static final int health_nutrition_time_now_text_color=0x7f070036;
-        public static final int high_score_color=0x7f07003c;
         /**  TODO: This is 40% alpha on the default accent color. 
          */
         public static final int highlighted_text_material_dark=0x7f070020;
@@ -1560,22 +1562,35 @@ containing a value of this type.
         public static final int highlighted_text_material_light=0x7f070021;
         public static final int hint_foreground_material_dark=0x7f07001e;
         public static final int hint_foreground_material_light=0x7f07001f;
-        public static final int home_advise_left_num_color=0x7f070041;
-        public static final int home_advise_right_num_color=0x7f070042;
-        public static final int home_advise_text_color=0x7f070040;
-        public static final int home_background_color=0x7f07003f;
+        public static final int home_advise_left_num_color=0x7f070040;
+        public static final int home_advise_right_num_color=0x7f070041;
+        public static final int home_advise_text_color=0x7f07003f;
+        public static final int home_circle_inner_outer_second=0x7f070039;
+        public static final int home_circle_inner_outer_third=0x7f07003a;
+        public static final int home_circle_inner_outermost=0x7f070038;
+        /**  home fragment 
+         */
+        public static final int home_circle_outermost=0x7f070037;
+        public static final int home_doc_color=0x7f07003e;
+        public static final int home_fen_color=0x7f07003d;
+        public static final int home_high_score_color=0x7f07003c;
+        public static final int home_low_score_color=0x7f07003b;
         public static final int link_text_material_dark=0x7f070022;
         public static final int link_text_material_light=0x7f070023;
-        public static final int low_score_color=0x7f07003b;
+        /**  main title 
+         */
         public static final int main_title_text_color=0x7f070031;
         public static final int material_blue_grey_800=0x7f07002e;
         public static final int material_blue_grey_900=0x7f07002f;
         public static final int material_blue_grey_950=0x7f070030;
         public static final int material_deep_teal_200=0x7f07002c;
         public static final int material_deep_teal_500=0x7f07002d;
+        public static final int menu_head_text_color=0x7f070043;
         public static final int menu_head_under_line_color=0x7f070044;
-        public static final int menu_text_color=0x7f070043;
-        public static final int milk_circle_double_line_color=0x7f07004e;
+        /**  menu  
+         */
+        public static final int menu_item_text_color=0x7f070042;
+        public static final int milk_circle_double_line_color=0x7f07004d;
         public static final int primary_dark_material_dark=0x7f07000a;
         public static final int primary_dark_material_light=0x7f07000b;
         public static final int primary_material_dark=0x7f070008;
@@ -1596,17 +1611,19 @@ containing a value of this type.
         public static final int secondary_text_disabled_material_light=0x7f070029;
         public static final int switch_thumb_normal_material_dark=0x7f070012;
         public static final int switch_thumb_normal_material_light=0x7f070013;
-        public static final int temperature_circle_left_line_color=0x7f070050;
-        public static final int temperature_circle_line_background_color=0x7f07004f;
-        public static final int temperature_circle_right_line_color=0x7f070051;
-        public static final int temperature_milk_checked_color=0x7f070046;
-        public static final int temperature_milk_excle_background_color=0x7f070049;
-        public static final int temperature_milk_excle_grid_first_background_color=0x7f07004b;
-        public static final int temperature_milk_excle_grid_second_background_color=0x7f07004c;
-        public static final int temperature_milk_excle_line_color=0x7f07004d;
-        public static final int temperature_milk_excle_title_text_color=0x7f07004a;
-        public static final int temperature_milk_title_text_color=0x7f070048;
-        public static final int temperature_milk_unchecked_color=0x7f070047;
+        public static final int temperature_circle_left_line_color=0x7f07004f;
+        public static final int temperature_circle_line_background_color=0x7f07004e;
+        public static final int temperature_circle_right_line_color=0x7f070050;
+        /**  temperature_amount 
+         */
+        public static final int temperature_milk_checked_color=0x7f070045;
+        public static final int temperature_milk_excle_background_color=0x7f070048;
+        public static final int temperature_milk_excle_grid_first_background_color=0x7f07004a;
+        public static final int temperature_milk_excle_grid_second_background_color=0x7f07004b;
+        public static final int temperature_milk_excle_line_color=0x7f07004c;
+        public static final int temperature_milk_excle_title_text_color=0x7f070049;
+        public static final int temperature_milk_title_text_color=0x7f070047;
+        public static final int temperature_milk_unchecked_color=0x7f070046;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -1697,7 +1714,6 @@ containing a value of this type.
  Default text size for action bar title.
          */
         public static final int abc_text_size_title_material_toolbar=0x7f080012;
-        public static final int activity_buttons_fragment_height=0x7f080035;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
@@ -1705,36 +1721,39 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f080033;
-        public static final int activity_vertical_margin=0x7f080034;
-        public static final int back_icon_height=0x7f080031;
-        public static final int back_icon_margin_left=0x7f080032;
-        public static final int back_icon_width=0x7f080030;
-        public static final int buttons_icon_size=0x7f080036;
-        public static final int details_content_amount_margin_icon_left=0x7f080065;
-        public static final int details_content_amount_text_size=0x7f080066;
-        public static final int details_content_arrow_margin_right=0x7f080069;
-        public static final int details_content_header_dividing_line_height=0x7f080062;
-        public static final int details_content_header_title_text_size=0x7f080063;
-        public static final int details_content_height=0x7f080061;
-        public static final int details_content_icon_height=0x7f080064;
-        public static final int details_content_margin_parent_left=0x7f08005f;
-        public static final int details_content_text_margin_bottom=0x7f080060;
-        public static final int details_content_time_text_margin_right=0x7f080067;
-        public static final int details_content_time_text_size=0x7f080068;
-        public static final int details_content_under_line_height=0x7f08006a;
-        public static final int details_content_under_line_margin_left=0x7f08006b;
-        public static final int details_once_dividing_height=0x7f08006c;
-        public static final int details_once_icon_margin_parent_bottom=0x7f08006e;
-        public static final int details_once_margin_parent_left=0x7f08006d;
-        public static final int details_once_margin_parent_right=0x7f080075;
-        public static final int details_once_text_margin_parent_bottom=0x7f08006f;
-        public static final int details_once_text_size=0x7f080074;
-        public static final int details_once_title_icon_height=0x7f080073;
-        public static final int details_once_title_icon_width=0x7f080072;
-        public static final int details_once_title_margin_icon_left=0x7f080070;
-        public static final int details_once_title_size=0x7f080071;
-        public static final int details_text_size=0x7f080037;
+        public static final int activity_horizontal_margin=0x7f08002b;
+        public static final int activity_vertical_margin=0x7f08002c;
+        public static final int back_icon_height=0x7f080035;
+        public static final int back_icon_margin_left=0x7f080036;
+        /**  menu_icon_settings 
+         */
+        public static final int back_icon_width=0x7f080034;
+        public static final int buttons_icon_size=0x7f080049;
+        public static final int details_content_amount_margin_icon_left=0x7f08007b;
+        public static final int details_content_amount_text_size=0x7f08007c;
+        public static final int details_content_arrow_margin_right=0x7f08007f;
+        public static final int details_content_header_dividing_line_height=0x7f080078;
+        public static final int details_content_header_title_text_size=0x7f080079;
+        public static final int details_content_height=0x7f080077;
+        public static final int details_content_icon_height=0x7f08007a;
+        /**  temepreture_amount_details 
+         */
+        public static final int details_content_margin_parent_left=0x7f080075;
+        public static final int details_content_text_margin_bottom=0x7f080076;
+        public static final int details_content_time_text_margin_right=0x7f08007d;
+        public static final int details_content_time_text_size=0x7f08007e;
+        public static final int details_content_under_line_height=0x7f080080;
+        public static final int details_content_under_line_margin_left=0x7f080081;
+        public static final int details_once_dividing_height=0x7f080082;
+        public static final int details_once_icon_margin_parent_bottom=0x7f080084;
+        public static final int details_once_margin_parent_left=0x7f080083;
+        public static final int details_once_margin_parent_right=0x7f08008b;
+        public static final int details_once_text_margin_parent_bottom=0x7f080085;
+        public static final int details_once_text_size=0x7f08008a;
+        public static final int details_once_title_icon_height=0x7f080089;
+        public static final int details_once_title_icon_width=0x7f080088;
+        public static final int details_once_title_margin_icon_left=0x7f080086;
+        public static final int details_once_title_size=0x7f080087;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1769,71 +1788,96 @@ containing a value of this type.
         public static final int dialog_fixed_width_minor=0x7f08000d;
         public static final int disabled_alpha_material_dark=0x7f080001;
         public static final int disabled_alpha_material_light=0x7f080000;
-        public static final int health_item_dividing_line_height=0x7f080043;
-        public static final int health_item_dividing_line_margin_left=0x7f080044;
-        public static final int health_item_height=0x7f080038;
-        public static final int health_item_icon_arrow_height=0x7f080040;
-        public static final int health_item_icon_arrow_margin_right=0x7f080042;
-        public static final int health_item_icon_arrow_width=0x7f080041;
-        public static final int health_item_icon_name_height=0x7f080039;
-        public static final int health_item_icon_name_margin_left=0x7f08003b;
-        public static final int health_item_icon_name_width=0x7f08003a;
-        public static final int health_item_text_container_height=0x7f08003c;
-        public static final int health_item_text_container_margin_icon_left=0x7f08003d;
-        public static final int health_item_text_details_size=0x7f08003f;
-        public static final int health_item_text_name_size=0x7f08003e;
-        public static final int health_nutrition_time_navigation=0x7f080045;
-        public static final int health_nutrition_time_now_text_size=0x7f080046;
-        public static final int home_advise_layout_height=0x7f080048;
-        public static final int home_advise_layout_width=0x7f080047;
-        public static final int home_advise_margin_top=0x7f080049;
-        public static final int home_advise_num_size=0x7f08004c;
-        public static final int home_advise_text_margin_left=0x7f08004d;
-        public static final int home_advise_text_margin_top=0x7f08004a;
-        public static final int home_advise_text_size=0x7f08004b;
-        public static final int main_title_height=0x7f08002b;
-        public static final int main_title_margin_top=0x7f08002d;
-        public static final int main_title_text_size=0x7f08002c;
-        public static final int menu_behind_offset=0x7f08005e;
-        public static final int menu_entry_height=0x7f08002f;
-        public static final int menu_head_icon_height=0x7f080050;
-        public static final int menu_head_icon_margin_bottom=0x7f080052;
-        public static final int menu_head_icon_margin_left=0x7f080051;
-        public static final int menu_head_icon_width=0x7f08004f;
-        public static final int menu_head_id_text_size=0x7f080055;
-        public static final int menu_head_name_text_size=0x7f080054;
-        public static final int menu_head_text_margin_left_icon=0x7f080053;
-        public static final int menu_head_under_line_height=0x7f080056;
-        public static final int menu_head_under_line_margin_left=0x7f080057;
-        public static final int menu_item_height=0x7f080058;
-        public static final int menu_item_icon_height=0x7f080059;
-        public static final int menu_item_icon_margin_left=0x7f08005b;
-        public static final int menu_item_icon_width=0x7f08005a;
-        public static final int menu_item_text_margin_left_icon=0x7f08005c;
-        public static final int menu_item_text_size=0x7f08005d;
-        public static final int menu_margin_left=0x7f08002e;
-        public static final int menu_title_height=0x7f08004e;
-        public static final int milk_circle_line_to_circle=0x7f080088;
-        public static final int milk_circle_line_width=0x7f080087;
-        public static final int temperature_circle_bottom_text_size=0x7f08008a;
-        public static final int temperature_circle_line_width=0x7f080089;
-        public static final int temperature_milk_date_layout_height=0x7f08007a;
-        public static final int temperature_milk_date_layout_width=0x7f080079;
-        public static final int temperature_milk_date_text_size=0x7f080078;
-        public static final int temperature_milk_excle_background_grid_height=0x7f08007d;
-        public static final int temperature_milk_excle_circle_r=0x7f080086;
-        public static final int temperature_milk_excle_left_title_text_size=0x7f08007e;
-        public static final int temperature_milk_excle_line_width=0x7f080085;
-        public static final int temperature_milk_excle_right_title_text_size=0x7f08007f;
-        public static final int temperature_milk_excle_text_margin_bottom=0x7f080080;
-        public static final int temperature_milk_excle_text_margin_left=0x7f080081;
-        public static final int temperature_milk_excle_title_margin_top=0x7f080082;
-        public static final int temperature_milk_excle_x_axis_margin_right=0x7f080084;
-        public static final int temperature_milk_excle_x_axis_start=0x7f080083;
-        public static final int temperature_milk_time_line_height=0x7f08007b;
-        public static final int temperature_milk_title_height=0x7f080076;
-        public static final int temperature_milk_title_margin_top=0x7f080077;
-        public static final int temperature_milk_up_excle_icon_height=0x7f08007c;
+        /**  footer_navigation_fragment 
+         */
+        public static final int footer_navigation_fragment_height=0x7f080048;
+        public static final int health_item_dividing_line_height=0x7f080055;
+        public static final int health_item_dividing_line_margin_left=0x7f080056;
+        /**  health_item  
+         */
+        public static final int health_item_height=0x7f08004a;
+        public static final int health_item_icon_arrow_height=0x7f080052;
+        public static final int health_item_icon_arrow_margin_right=0x7f080054;
+        public static final int health_item_icon_arrow_width=0x7f080053;
+        public static final int health_item_icon_name_height=0x7f08004b;
+        public static final int health_item_icon_name_margin_left=0x7f08004d;
+        public static final int health_item_icon_name_width=0x7f08004c;
+        public static final int health_item_text_details_size=0x7f080051;
+        public static final int health_item_text_name_size=0x7f080050;
+        public static final int health_item_texts_container_height=0x7f08004e;
+        public static final int health_item_texts_container_margin_icon_left=0x7f08004f;
+        /**  health_item nutrition  
+         */
+        public static final int health_nutrition_time_navigation_height=0x7f080057;
+        public static final int health_nutrition_time_now_text_size=0x7f080058;
+        public static final int home_advise_layout_height=0x7f08005a;
+        /**  home fragment  
+         */
+        public static final int home_advise_layout_width=0x7f080059;
+        public static final int home_advise_margin_top=0x7f08005b;
+        public static final int home_advise_num_margin_bottom=0x7f080060;
+        public static final int home_advise_num_size=0x7f08005e;
+        public static final int home_advise_text_margin_left=0x7f08005f;
+        public static final int home_advise_text_margin_top=0x7f08005c;
+        public static final int home_advise_text_size=0x7f08005d;
+        /**  main_title 
+         */
+        public static final int main_title_height=0x7f08002d;
+        public static final int main_title_margin_top=0x7f08002f;
+        public static final int main_title_text_size=0x7f08002e;
+        public static final int menu_behind_offset=0x7f080047;
+        public static final int menu_entry_height=0x7f080033;
+        /**  menu head 
+         */
+        public static final int menu_head_height=0x7f08003d;
+        public static final int menu_head_icon_height=0x7f08003f;
+        public static final int menu_head_icon_margin_bottom=0x7f080041;
+        public static final int menu_head_icon_margin_left=0x7f080040;
+        public static final int menu_head_icon_width=0x7f08003e;
+        public static final int menu_head_id_text_size=0x7f080044;
+        public static final int menu_head_name_text_size=0x7f080043;
+        public static final int menu_head_text_margin_left_icon=0x7f080042;
+        public static final int menu_head_under_line_height=0x7f080045;
+        public static final int menu_head_under_line_margin_left=0x7f080046;
+        /**   menu item  
+         */
+        public static final int menu_item_height=0x7f080037;
+        public static final int menu_item_icon_height=0x7f080038;
+        public static final int menu_item_icon_margin_left=0x7f08003a;
+        public static final int menu_item_icon_width=0x7f080039;
+        public static final int menu_item_text_margin_left_icon=0x7f08003b;
+        public static final int menu_item_text_size=0x7f08003c;
+        /**  menu_icon_settings 
+         */
+        public static final int menu_margin_left=0x7f080032;
+        public static final int milk_circle_line_to_circle=0x7f080072;
+        public static final int milk_circle_line_width=0x7f080071;
+        /**  minor_title 
+         */
+        public static final int minor_title_height=0x7f080030;
+        public static final int minor_title_margin_top=0x7f080031;
+        public static final int temperature_circle_bottom_text_size=0x7f080074;
+        public static final int temperature_circle_line_width=0x7f080073;
+        public static final int temperature_milk_date_layout_height=0x7f080064;
+        public static final int temperature_milk_date_layout_width=0x7f080063;
+        public static final int temperature_milk_date_text_size=0x7f080062;
+        /**  temepreture_amount unit 
+         */
+        public static final int temperature_milk_excle_background_grid_height=0x7f080067;
+        public static final int temperature_milk_excle_circle_r=0x7f080070;
+        public static final int temperature_milk_excle_left_title_text_size=0x7f080068;
+        public static final int temperature_milk_excle_line_width=0x7f08006f;
+        public static final int temperature_milk_excle_right_title_text_size=0x7f080069;
+        public static final int temperature_milk_excle_text_margin_bottom=0x7f08006a;
+        public static final int temperature_milk_excle_text_margin_left=0x7f08006b;
+        public static final int temperature_milk_excle_title_margin_top=0x7f08006c;
+        public static final int temperature_milk_excle_x_axis_margin_right=0x7f08006e;
+        public static final int temperature_milk_excle_x_axis_start=0x7f08006d;
+        public static final int temperature_milk_time_line_height=0x7f080065;
+        /**  tempreture_amount  
+         */
+        public static final int temperature_milk_title_height=0x7f080061;
+        public static final int temperature_milk_up_excle_icon_height=0x7f080066;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -1889,13 +1933,13 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int arrow_icon=0x7f020033;
         public static final int back_icon=0x7f020034;
-        public static final int buttons_background=0x7f020035;
-        public static final int buttons_health_icon=0x7f020036;
-        public static final int buttons_home_icon=0x7f020037;
-        public static final int buttons_milk_icon=0x7f020038;
+        public static final int buttons_amount_icon=0x7f020035;
+        public static final int buttons_background=0x7f020036;
+        public static final int buttons_health_icon=0x7f020037;
+        public static final int buttons_home_icon=0x7f020038;
         public static final int buttons_person_center_icon=0x7f020039;
         public static final int buttons_temperature_icon=0x7f02003a;
-        public static final int buttons_up_one_line=0x7f02003b;
+        public static final int buttons_up_line=0x7f02003b;
         public static final int details_amount_normal=0x7f02003c;
         public static final int details_amount_warning=0x7f02003d;
         public static final int details_others=0x7f02003e;
@@ -1912,10 +1956,10 @@ containing a value of this type.
         public static final int menu_entry=0x7f020049;
         public static final int menu_family_icon=0x7f02004a;
         public static final int menu_milk_settings_icon=0x7f02004b;
-        public static final int temerature_milk_up_exlce_icon=0x7f02004c;
-        public static final int temperature_milk_circle_background=0x7f02004d;
-        public static final int temperature_milk_title_background=0x7f02004e;
-        public static final int temperature_time_line_background=0x7f02004f;
+        public static final int temerature_amount_up_exlce_icon=0x7f02004c;
+        public static final int temperature_amount_circle_background=0x7f02004d;
+        public static final int temperature_amount_time_line_background=0x7f02004e;
+        public static final int temperature_amount_title_background=0x7f02004f;
     }
     public static final class id {
         public static final int Activity_buttons_fragments_container=0x7f050045;
@@ -1933,7 +1977,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f050033;
         public static final int action_mode_bar_stub=0x7f050032;
         public static final int action_mode_close_button=0x7f050025;
-        public static final int action_settings=0x7f0500a3;
+        public static final int action_settings=0x7f0500a1;
         public static final int activity_chooser_view_content=0x7f050026;
         public static final int always=0x7f050019;
         public static final int beginning=0x7f050020;
@@ -1945,36 +1989,34 @@ containing a value of this type.
         public static final int checkbox=0x7f05002e;
         public static final int cilent=0x7f05004b;
         public static final int collapseActionView=0x7f05001a;
-        public static final int content=0x7f050080;
+        public static final int content=0x7f05007b;
         public static final int decor_content_parent=0x7f050034;
         public static final int default_activity_button=0x7f050029;
         public static final int details_back=0x7f050047;
-        public static final int details_content_down_dividing_line=0x7f050085;
-        public static final int details_content_header_date=0x7f05007e;
-        public static final int details_content_header_down_dividing_line=0x7f05007f;
-        public static final int details_content_header_layout=0x7f05007c;
-        public static final int details_content_header_up_dividing_line=0x7f05007d;
+        public static final int details_content_down_dividing_line=0x7f050080;
+        public static final int details_content_header_date=0x7f050079;
+        public static final int details_content_header_down_dividing_line=0x7f05007a;
+        public static final int details_content_header_layout=0x7f050077;
+        public static final int details_content_header_up_dividing_line=0x7f050078;
         public static final int details_header_layout=0x7f050046;
-        public static final int details_once_advise_amount=0x7f05008f;
-        public static final int details_once_advise_amount_num=0x7f050090;
-        public static final int details_once_amount_icon=0x7f050089;
-        public static final int details_once_amount_title_text=0x7f05008a;
-        public static final int details_once_back=0x7f050087;
-        public static final int details_once_end_time=0x7f0500a1;
-        public static final int details_once_end_time_num=0x7f0500a2;
-        public static final int details_once_health=0x7f05009e;
-        public static final int details_once_health_num=0x7f05009f;
-        public static final int details_once_others_icon=0x7f05009b;
-        public static final int details_once_others_text=0x7f05009c;
-        public static final int details_once_real_amount=0x7f05008c;
-        public static final int details_once_real_amount_num=0x7f05008d;
-        public static final int details_once_temperature_end=0x7f050098;
-        public static final int details_once_temperature_end_num=0x7f050099;
-        public static final int details_once_temperature_icon=0x7f050092;
-        public static final int details_once_temperature_start=0x7f050095;
-        public static final int details_once_temperature_start_num=0x7f050096;
-        public static final int details_once_temperature_title_text=0x7f050093;
-        public static final int details_once_title=0x7f050086;
+        public static final int details_once_advise_amount=0x7f050088;
+        public static final int details_once_advise_amount_num=0x7f050089;
+        public static final int details_once_amount_icon=0x7f050082;
+        public static final int details_once_amount_title_text=0x7f050083;
+        public static final int details_once_end_time=0x7f05009a;
+        public static final int details_once_end_time_num=0x7f05009b;
+        public static final int details_once_health=0x7f050097;
+        public static final int details_once_health_num=0x7f050098;
+        public static final int details_once_others_icon=0x7f050094;
+        public static final int details_once_others_text=0x7f050095;
+        public static final int details_once_real_amount=0x7f050085;
+        public static final int details_once_real_amount_num=0x7f050086;
+        public static final int details_once_temperature_end=0x7f050091;
+        public static final int details_once_temperature_end_num=0x7f050092;
+        public static final int details_once_temperature_icon=0x7f05008b;
+        public static final int details_once_temperature_start=0x7f05008e;
+        public static final int details_once_temperature_start_num=0x7f05008f;
+        public static final int details_once_temperature_title_text=0x7f05008c;
         public static final int detals_listView=0x7f050048;
         public static final int dialog=0x7f05001e;
         public static final int disableHome=0x7f050013;
@@ -1985,57 +2027,53 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f050027;
         public static final int expanded_menu=0x7f05002d;
         public static final int fullscreen=0x7f05000c;
-        public static final int health_item_arrow=0x7f05005a;
-        public static final int health_item_details=0x7f050059;
-        public static final int health_item_icon_container=0x7f050057;
-        public static final int health_item_name=0x7f050058;
-        public static final int health_listview=0x7f050056;
-        public static final int health_nutirtion_header_layout=0x7f05005b;
-        public static final int health_nutrition_back=0x7f05005c;
-        public static final int health_nutrition_sector=0x7f05005e;
-        public static final int health_nutrition_time_now=0x7f05005d;
-        public static final int health_title_text=0x7f050054;
+        public static final int health_item_arrow=0x7f050058;
+        public static final int health_item_details=0x7f050057;
+        public static final int health_item_icon_container=0x7f050055;
+        public static final int health_item_name=0x7f050056;
+        public static final int health_listview=0x7f050054;
+        public static final int health_nutrition_sector=0x7f05005a;
+        public static final int health_nutrition_time_now=0x7f050059;
         public static final int home=0x7f050001;
         public static final int homeAsUp=0x7f050014;
-        public static final int home_left_amount=0x7f050065;
-        public static final int home_left_second_title=0x7f050062;
-        public static final int home_left_temperature=0x7f050064;
-        public static final int home_left_third_title=0x7f050063;
-        public static final int home_left_title=0x7f050061;
-        public static final int home_menu_entry=0x7f050055;
-        public static final int home_right_amount=0x7f05006a;
-        public static final int home_right_second_title=0x7f050068;
-        public static final int home_right_temperature=0x7f05006b;
-        public static final int home_right_third_title=0x7f050069;
-        public static final int home_right_title=0x7f050067;
-        public static final int horizontalScrollView1=0x7f050079;
+        public static final int home_left_amount=0x7f050060;
+        public static final int home_left_second_title=0x7f05005d;
+        public static final int home_left_temperature=0x7f05005f;
+        public static final int home_left_third_title=0x7f05005e;
+        public static final int home_left_title=0x7f05005c;
+        public static final int home_right_amount=0x7f050065;
+        public static final int home_right_second_title=0x7f050063;
+        public static final int home_right_temperature=0x7f050066;
+        public static final int home_right_third_title=0x7f050064;
+        public static final int home_right_title=0x7f050062;
+        public static final int horizontalScrollView1=0x7f050074;
         public static final int icon=0x7f05002b;
         public static final int ifRoom=0x7f05001b;
         public static final int image=0x7f050028;
-        public static final int imageView2=0x7f05006f;
-        public static final int imageView3=0x7f050070;
-        public static final int jiantou=0x7f050083;
+        public static final int imageView2=0x7f05006b;
+        public static final int imageView3=0x7f05006c;
+        public static final int jiantou=0x7f05007e;
         public static final int kejian=0x7f05004c;
         public static final int left=0x7f05000a;
-        public static final int linearlayout=0x7f05007a;
+        public static final int linearlayout=0x7f050075;
         public static final int listMode=0x7f050010;
         public static final int list_item=0x7f05002a;
         public static final int margin=0x7f05000d;
-        public static final int menu_image=0x7f050071;
-        public static final int menu_image_container=0x7f05006d;
-        public static final int menu_text=0x7f050072;
-        public static final int menu_title_id=0x7f05006e;
-        public static final int menu_title_name=0x7f05005f;
+        public static final int menu_image=0x7f05006d;
+        public static final int menu_image_container=0x7f050068;
+        public static final int menu_text=0x7f05006e;
+        public static final int menu_title_id=0x7f05006a;
+        public static final int menu_title_name=0x7f050069;
         public static final int middle=0x7f050022;
         public static final int never=0x7f05001c;
         public static final int none=0x7f05000e;
         public static final int normal=0x7f050011;
-        public static final int num=0x7f050082;
-        public static final int one=0x7f050081;
+        public static final int num=0x7f05007d;
+        public static final int one=0x7f05007c;
         public static final int progress_circular=0x7f050008;
         public static final int progress_horizontal=0x7f050009;
         public static final int radio=0x7f050030;
-        public static final int relativeLayout1=0x7f050066;
+        public static final int relativeLayout1=0x7f050061;
         public static final int right=0x7f05000b;
         public static final int search_badge=0x7f05003a;
         public static final int search_bar=0x7f050039;
@@ -2053,31 +2091,35 @@ containing a value of this type.
         public static final int showCustom=0x7f050015;
         public static final int showHome=0x7f050016;
         public static final int showTitle=0x7f050017;
-        public static final int slidingmenumain=0x7f050073;
+        public static final int slidingmenumain=0x7f05006f;
         public static final int sousuo=0x7f050049;
         public static final int split_action_bar=0x7f050005;
         public static final int submit_area=0x7f050041;
         public static final int tabMode=0x7f050012;
-        public static final int tableRow1=0x7f050088;
-        public static final int tableRow2=0x7f05008b;
-        public static final int tableRow3=0x7f05008e;
-        public static final int tableRow4=0x7f050091;
-        public static final int tableRow5=0x7f050094;
-        public static final int tableRow6=0x7f050097;
-        public static final int tableRow7=0x7f05009a;
-        public static final int tableRow8=0x7f05009d;
-        public static final int tableRow9=0x7f0500a0;
-        public static final int temperature_milk_circle_container=0x7f050060;
-        public static final int temperature_milk_day_show=0x7f050075;
-        public static final int temperature_milk_excle_container=0x7f05007b;
-        public static final int temperature_milk_month_show=0x7f050077;
-        public static final int temperature_milk_time_line_layout=0x7f050078;
-        public static final int temperature_milk_title_text=0x7f050074;
-        public static final int temperature_milk_week_show=0x7f050076;
+        public static final int tableRow1=0x7f050081;
+        public static final int tableRow12=0x7f05009c;
+        public static final int tableRow13=0x7f05009d;
+        public static final int tableRow2=0x7f050084;
+        public static final int tableRow3=0x7f050087;
+        public static final int tableRow4=0x7f05008a;
+        public static final int tableRow5=0x7f05008d;
+        public static final int tableRow6=0x7f050090;
+        public static final int tableRow7=0x7f050093;
+        public static final int tableRow8=0x7f050096;
+        public static final int tableRow9=0x7f050099;
+        public static final int temperature_milk_circle_container=0x7f05005b;
+        public static final int temperature_milk_day_show=0x7f050070;
+        public static final int temperature_milk_excle_container=0x7f050076;
+        public static final int temperature_milk_month_show=0x7f050072;
+        public static final int temperature_milk_time_line_layout=0x7f050073;
+        public static final int temperature_milk_week_show=0x7f050071;
         public static final int tijiao=0x7f05004d;
-        public static final int time=0x7f050084;
+        public static final int time=0x7f05007f;
         public static final int title=0x7f05002c;
-        public static final int tuisong=0x7f05006c;
+        public static final int title_background=0x7f05009e;
+        public static final int title_left_icon=0x7f0500a0;
+        public static final int title_text=0x7f05009f;
+        public static final int tuisong=0x7f050067;
         public static final int up=0x7f050002;
         public static final int useLogo=0x7f050018;
         public static final int withText=0x7f05001d;
@@ -2133,22 +2175,26 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_main=0x7f030017;
-        public static final int bluetooth=0x7f030018;
-        public static final int buttons=0x7f030019;
-        public static final int health=0x7f03001a;
-        public static final int health_item=0x7f03001b;
-        public static final int health_nutrition=0x7f03001c;
-        public static final int home=0x7f03001d;
-        public static final int menu=0x7f03001e;
-        public static final int menu_item=0x7f03001f;
-        public static final int slidingmenumain=0x7f030020;
-        public static final int support_simple_spinner_dropdown_item=0x7f030021;
-        public static final int temperature_milk=0x7f030022;
-        public static final int temperature_milk_circle_excle=0x7f030023;
-        public static final int temperature_milk_details=0x7f030024;
-        public static final int temperature_milk_details_content=0x7f030025;
-        public static final int temperature_milk_details_header=0x7f030026;
-        public static final int temperature_milk_details_once=0x7f030027;
+        public static final int activity_minor=0x7f030018;
+        public static final int bluetooth=0x7f030019;
+        public static final int buttons=0x7f03001a;
+        public static final int health=0x7f03001b;
+        public static final int health_item=0x7f03001c;
+        public static final int health_nutrition=0x7f03001d;
+        public static final int home=0x7f03001e;
+        public static final int menu=0x7f03001f;
+        public static final int menu_item=0x7f030020;
+        public static final int slidingmenumain=0x7f030021;
+        public static final int support_simple_spinner_dropdown_item=0x7f030022;
+        public static final int temperature_amount=0x7f030023;
+        public static final int temperature_amount_circle_excle=0x7f030024;
+        public static final int temperature_amount_details=0x7f030025;
+        public static final int temperature_amount_details_content=0x7f030026;
+        public static final int temperature_amount_details_header=0x7f030027;
+        public static final int temperature_amount_details_once=0x7f030028;
+        public static final int title_main=0x7f030029;
+        public static final int title_minor=0x7f03002a;
+        public static final int title_temperatrue_milk=0x7f03002b;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
@@ -2210,44 +2256,57 @@ containing a value of this type.
         /**  Content description for the Toolbar icon used to collapse an expanded action mode. [CHAR LIMIT=NONE] 
          */
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
-        public static final int action_settings=0x7f0a0019;
-        public static final int app_name=0x7f0a0017;
-        public static final int details_milk_title_string=0x7f0a001a;
-        public static final int details_once_advise_amount_string=0x7f0a001e;
-        public static final int details_once_end_time=0x7f0a0022;
-        public static final int details_once_health=0x7f0a0021;
-        public static final int details_once_real_amount_string=0x7f0a001d;
-        public static final int details_once_temperature_end=0x7f0a0020;
-        public static final int details_once_temperature_start=0x7f0a001f;
-        public static final int details_once_title_string=0x7f0a001c;
-        public static final int details_temperature_title_string=0x7f0a001b;
-        public static final int health_title_text=0x7f0a0010;
-        public static final int hello_world=0x7f0a0018;
-        public static final int home_advise_left_title=0x7f0a0013;
-        public static final int home_advise_right_title=0x7f0a0014;
-        public static final int home_advise_second_title=0x7f0a0015;
-        public static final int home_advise_third_title=0x7f0a0016;
-        public static final int home_circle_doc=0x7f0a0011;
-        public static final int home_title_text=0x7f0a0012;
-        public static final int milk_excle_day_left_title=0x7f0a002f;
-        public static final int milk_excle_day_right_title=0x7f0a002e;
-        public static final int milk_excle_month_left_title=0x7f0a0033;
-        public static final int milk_excle_month_right_title=0x7f0a0032;
-        public static final int milk_excle_week_left_title=0x7f0a0031;
-        public static final int milk_excle_week_right_title=0x7f0a0030;
-        public static final int milk_title_text=0x7f0a002d;
-        public static final int temerature_circle_bottome_left_title=0x7f0a0034;
-        public static final int temerature_circle_bottome_right_title=0x7f0a0035;
-        public static final int temperature_excle_day_left_title=0x7f0a0028;
-        public static final int temperature_excle_day_right_title=0x7f0a0027;
-        public static final int temperature_excle_month_left_title=0x7f0a002c;
-        public static final int temperature_excle_month_right_title=0x7f0a002b;
-        public static final int temperature_excle_week_left_title=0x7f0a002a;
-        public static final int temperature_excle_week_right_title=0x7f0a0029;
-        public static final int temperature_milk_day_text=0x7f0a0023;
-        public static final int temperature_milk_month_text=0x7f0a0025;
-        public static final int temperature_milk_week_text=0x7f0a0024;
-        public static final int temperature_title_text=0x7f0a0026;
+        public static final int action_settings=0x7f0a0012;
+        /**  app settings 
+         */
+        public static final int app_name=0x7f0a0010;
+        /**  tempreture_amount details 
+         */
+        public static final int details_milk_title_string=0x7f0a002e;
+        public static final int details_once_advise_amount_string=0x7f0a0032;
+        public static final int details_once_end_time=0x7f0a0036;
+        public static final int details_once_health=0x7f0a0035;
+        public static final int details_once_real_amount_string=0x7f0a0031;
+        public static final int details_once_temperature_end=0x7f0a0034;
+        public static final int details_once_temperature_start=0x7f0a0033;
+        public static final int details_once_title_string=0x7f0a0030;
+        public static final int details_temperature_title_string=0x7f0a002f;
+        /**  health nutrition 
+         */
+        public static final int health_nutrition_title=0x7f0a0013;
+        /**  health  
+         */
+        public static final int health_title_text=0x7f0a0014;
+        public static final int hello_world=0x7f0a0011;
+        public static final int home_advise_left_title=0x7f0a0017;
+        public static final int home_advise_right_title=0x7f0a0018;
+        public static final int home_advise_second_title=0x7f0a0019;
+        public static final int home_advise_third_title=0x7f0a001a;
+        /**  home fragment 
+         */
+        public static final int home_circle_doc=0x7f0a0015;
+        public static final int home_title_text=0x7f0a0016;
+        public static final int milk_excle_day_left_title=0x7f0a0027;
+        public static final int milk_excle_day_right_title=0x7f0a0026;
+        public static final int milk_excle_month_left_title=0x7f0a002b;
+        public static final int milk_excle_month_right_title=0x7f0a002a;
+        public static final int milk_excle_week_left_title=0x7f0a0029;
+        public static final int milk_excle_week_right_title=0x7f0a0028;
+        public static final int milk_title_text=0x7f0a0025;
+        public static final int temerature_circle_bottome_left_title=0x7f0a002c;
+        public static final int temerature_circle_bottome_right_title=0x7f0a002d;
+        public static final int temperature_excle_day_left_title=0x7f0a0020;
+        public static final int temperature_excle_day_right_title=0x7f0a001f;
+        public static final int temperature_excle_month_left_title=0x7f0a0024;
+        public static final int temperature_excle_month_right_title=0x7f0a0023;
+        public static final int temperature_excle_week_left_title=0x7f0a0022;
+        public static final int temperature_excle_week_right_title=0x7f0a0021;
+        /**  tempreture_amount   
+         */
+        public static final int temperature_milk_day_text=0x7f0a001b;
+        public static final int temperature_milk_month_text=0x7f0a001d;
+        public static final int temperature_milk_week_text=0x7f0a001c;
+        public static final int temperature_title_text=0x7f0a001e;
     }
     public static final class style {
         /** 

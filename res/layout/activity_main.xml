@@ -22,14 +22,14 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="@drawable/buttons_up_one_line"
+        android:background="@drawable/buttons_up_line"
         android:orientation="vertical" >
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/Activity_buttons_fragments_container"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/activity_buttons_fragment_height"
+        android:layout_height="@dimen/footer_navigation_fragment_height"
         android:orientation="vertical"
          >
     </LinearLayout>
