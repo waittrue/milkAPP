@@ -2,22 +2,11 @@ package com.inhand.milk.fragment.temperature_amount;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.example.aaaa.R;
-import com.inhand.milk.activity.BaseActivty;
-import com.inhand.milk.activity.MainActivity;
 import com.inhand.milk.activity.StaticsDetailsActivity;
-import com.inhand.milk.fragment.TemperatureMilkTitle;
-import com.inhand.milk.fragment.temperature_amount.details.DetailsFragment;
-
-import android.R.bool;
-import android.R.integer;
 import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -51,7 +40,7 @@ private OnClickListener onClickListener = new OnClickListener() {
 		mActivty = activity;
 	    inflater = activity.getLayoutInflater(); 
 	    mContext = context;
-	    layout = inflater.inflate(R.layout.temperature_milk_circle_excle, null);
+	    layout = inflater.inflate(R.layout.temperature_amount_circle_excle, null);
 	    mIsTemperature = isTemperature;
 	    if (mIsTemperature){
 	    	max = 50;

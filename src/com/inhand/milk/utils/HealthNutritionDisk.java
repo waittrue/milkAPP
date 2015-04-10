@@ -169,7 +169,6 @@ public class HealthNutritionDisk extends ViewGroup {
 	private void startMyRotateAnimation(int index){
 		if (lastIndex != -1)
 			views.get(lastIndex).clearAnimation();
-		float lastSweepAngleOffset = sweepAngleOffset;
 		float centerAngle = (radians[index][0] + radians[index][1])/2 ;
 		float time = 90 - centerAngle;
 		sweepAngleOffset = time;

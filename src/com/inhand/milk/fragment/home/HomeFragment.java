@@ -3,6 +3,7 @@ package com.inhand.milk.fragment.home;
 import com.example.aaaa.R;
 import com.inhand.milk.activity.MainActivity;
 import com.inhand.milk.fragment.TitleFragment;
+import com.inhand.milk.utils.firstlanunch.SmallDotsTab;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -40,7 +41,6 @@ public class HomeFragment extends TitleFragment{
 		LinearLayout linearCircle = (LinearLayout)view.findViewById(R.id.temperature_milk_circle_container);
 		linearCircle.addView(circle);
 		circle.start();
-		
 		setOthers(view);
 		
 	}

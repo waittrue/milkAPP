@@ -23,9 +23,10 @@ public class HealthNutritionActivity extends SubActivity {
 	}
 
 	@Override
-	protected void initFragment() {
+	protected Fragment initFragment() {
 		// TODO Auto-generated method stub
-		mFragment = new Nutrition();
+		Fragment mFragment = new Nutrition();
+		return mFragment;
 	}
 		
 

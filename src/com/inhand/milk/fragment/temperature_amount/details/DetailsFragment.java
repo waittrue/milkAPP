@@ -34,7 +34,7 @@ public class DetailsFragment  extends TitleFragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		mView  = inflater.inflate(R.layout.temperature_milk_details,container, false);
+		mView  = inflater.inflate(R.layout.temperature_amount_details,container, false);
 		if (!isTemperature)
 			setTitleview(getString(R.string.details_milk_title_string), 2);
 		else 
@@ -60,7 +60,7 @@ public class DetailsFragment  extends TitleFragment{
 	private View getHeadView(){
 		View headview ;
 		LayoutInflater inflater = getActivity().getLayoutInflater();
-		headview = inflater.inflate(R.layout.temperature_milk_details_header, listView,false);	
+		headview = inflater.inflate(R.layout.temperature_amount_details_header, listView,false);	
 		return headview;
 	}
 	

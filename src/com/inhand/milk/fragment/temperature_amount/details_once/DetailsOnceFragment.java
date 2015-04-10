@@ -20,7 +20,7 @@ public class DetailsOnceFragment extends TitleFragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		mView =  inflater.inflate(R.layout.temperature_milk_details_once, null);
+		mView =  inflater.inflate(R.layout.temperature_amount_details_once, null);
 		//setBack();
 		setTitleview(getString(R.string.details_once_title_string), 2);
 		setInfo();

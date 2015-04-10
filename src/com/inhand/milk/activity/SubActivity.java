@@ -10,7 +10,7 @@ import android.os.Bundle;
 
 public abstract class SubActivity extends BaseActivty{
 
-	protected Fragment mFragment;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -18,9 +18,9 @@ public abstract class SubActivity extends BaseActivty{
 		setContentView(R.layout.activity_minor);
 		FragmentManager manager = getFragmentManager();
 		FragmentTransaction mTransaction = manager.beginTransaction();
-		initFragment();
+		Fragment mFragment = initFragment();
 		mTransaction.add(R.id.Activity_fragments_container,mFragment);
 		mTransaction.commit();	
 	}
-	protected abstract void initFragment();
+	protected abstract Fragment initFragment();
 }

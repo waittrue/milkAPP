@@ -37,7 +37,7 @@ public abstract class BaseStatistics extends TitleFragment {
 	@Override  
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,  
             Bundle savedInstanceState) {  
-		 mView = inflater.inflate(R.layout.temperature_milk, container, false);
+		 mView = inflater.inflate(R.layout.temperature_amount, container, false);
 		 initVariable();
 	     return mView;
     }  

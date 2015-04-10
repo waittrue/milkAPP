@@ -25,6 +25,40 @@
     <color name="home_advise_left_num_color">#fd7272</color>
     <color name="home_advise_right_num_color">#02bdb4</color>
     
-    <!-- menu item -->
+    <!-- menu  -->
     <color name="menu_item_text_color">#ffffff</color>
+    <color name="menu_head_text_color">#ffffff</color>
+    <color name="menu_head_under_line_color">#ffffff</color>
+    
+    <!-- temperature_amount -->
+    <color name="temperature_milk_checked_color">#b2ebf9</color>
+    <color name="temperature_milk_unchecked_color">#02b4ba</color>
+    <color name="temperature_milk_title_text_color">#ffffff</color>
+    <color name="temperature_milk_excle_background_color">#ffffff</color>
+    <color name="temperature_milk_excle_title_text_color">#000000</color>
+    <color name="temperature_milk_excle_grid_first_background_color">#edfaf9</color>
+    <color name="temperature_milk_excle_grid_second_background_color">#ffffff</color>
+    <color name="temperature_milk_excle_line_color">#0196a0</color>
+    <color name="milk_circle_double_line_color">#209297</color>
+    <color name="temperature_circle_line_background_color">#209297</color>
+    <color name="temperature_circle_left_line_color">#eef966</color>
+    <color name="temperature_circle_right_line_color">#00f5fe</color>
+    
+    <!-- tempreture_amount details -->
+    <color name="details_content_header_background_color">#fff0eff5</color>
+    <color name="details_content_header_dividing_line_color">#c8c8c8</color>
+    <color name="details_content_header_text_color">#6d6c72</color>
+    <color name="details_content_amount_text_color">#000000</color>
+    <color name="details_content_time_text_color">#929294</color>
+    <color name="details_content_under_line_color">#c8c8c8</color>
+    <color name="details_content_background_color">#ffffff</color>
+    <color name="details_once_title_color">#c8c8c8</color>
+    <color name="details_once_item_background_color">#ffffff</color>
+    <color name="details_once_text_color">#000000</color>
+  	<color name="details_once_title_background_color">#fff0eff5</color>
+  	
+  	<!-- utils firet lanunch -->
+  	<color name="small_dots_select_color">#ffffff</color>
+  	<color name="small_dots_noselect_color">#c8c8c8</color>
+  	    
 </resources>

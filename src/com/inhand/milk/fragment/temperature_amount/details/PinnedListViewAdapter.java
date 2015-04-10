@@ -57,7 +57,7 @@ public class PinnedListViewAdapter extends  BaseAdapter implements HeadViewManag
 		ViewHolder viewHolder;
 		
 		if(convertView == null){
-			convertView = inflater.inflate(R.layout.temperature_milk_details_content, null);
+			convertView = inflater.inflate(R.layout.temperature_amount_details_content, null);
 			viewHolder  = new ViewHolder();
 			viewHolder.title = (TextView)convertView.findViewById(R.id.details_content_header_date);
 			viewHolder.titleLayout = (View)convertView.findViewById(R.id.details_content_header_layout);

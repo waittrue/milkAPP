@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_launch_bckground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/Activity_fragments_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_launch_small_bots_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_lanunch_small_bots_container_height"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_lanunch_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_lanunch_bottom_height"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+</LinearLayout>

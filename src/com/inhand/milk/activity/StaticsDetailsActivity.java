@@ -3,6 +3,7 @@ package com.inhand.milk.activity;
 import com.example.aaaa.R;
 import com.inhand.milk.fragment.temperature_amount.details.DetailsFragment;
 
+import android.app.Fragment;
 import android.os.Bundle;
 
 public class StaticsDetailsActivity extends SubActivity{
@@ -14,13 +15,14 @@ public class StaticsDetailsActivity extends SubActivity{
 	}
 
 	@Override
-	protected void initFragment() {
+	protected Fragment initFragment() {
 		// TODO Auto-generated method stub
-		mFragment = new DetailsFragment();
+		Fragment mFragment = new DetailsFragment();
 		if (getIntent().getExtras().getBoolean("isTemperature"))
 			((DetailsFragment)mFragment ).setTemperature(true);
 		else 
 			((DetailsFragment)mFragment ).setTemperature(false);
+		return mFragment;
 	}
 	
 	

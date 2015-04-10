@@ -28,6 +28,7 @@ public class MainActivity extends BaseActivty {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 	    FragmentManager fragmentManager = getFragmentManager();  
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();  
 		buttons = new FooterNavigation();
