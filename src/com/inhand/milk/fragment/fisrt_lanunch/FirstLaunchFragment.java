@@ -38,15 +38,23 @@ public abstract class FirstLaunchFragment extends Fragment {
 		super.onStart();
 		inAnimation();
 	}
+	
+
+	@Override
+	public void onHiddenChanged(boolean hidden) {
+		// TODO Auto-generated method stub
+		super.onHiddenChanged(hidden);
+			
+	}
 
 
-	protected   void enterNextFragmet(){
+	protected  void enterNextFragmet(){
 		FragmentManager fragmentManager = getActivity().getFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		Fragment fragment = nextFragment();
 		if (fragment !=null){
 			fragmentTransaction.hide(this);
-			fragmentTransaction.replace(R.id.Activity_fragments_container,fragment,null);
+			fragmentTransaction.add(R.id.Activity_fragments_container,fragment,null);
 			//fragmentTransaction.show(fragment);
 			fragmentTransaction.addToBackStack(null);
 			fragmentTransaction.commit();
@@ -62,9 +70,9 @@ public abstract class FirstLaunchFragment extends Fragment {
 		FragmentManager fragmentManager = getActivity().getFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		fragmentManager.popBackStack();
-		fragmentTransaction.commit();
+		//fragmentTransaction.commit();
 		((FirstLanunchActivity)getActivity()).movePreDots();
-		Toast.makeText(getActivity().getApplicationContext(), "enterPreFragment", 1000).show();
+		//Toast.makeText(getActivity().getApplicationContext(), "enterPreFragment", 1000).show();
 		//lanunchBottom.setClickable(false);
 		lanunchBottom.clearAllClick();
 	}

@@ -35,24 +35,20 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/first_lanunch_babyinfo_icon_height">
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" >
-        </RelativeLayout>
+        
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="2" >
 
             <ImageView
                 android:id="@+id/first_launch_baby_info_girl_icon"
-                android:layout_width="fill_parent"
+                android:layout_width="@dimen/first_lanunch_babyinfo_icon_width"
                 android:layout_height="fill_parent"
                 android:layout_alignParentRight="true"
                 android:layout_centerHorizontal="false"
-                android:scaleType="fitEnd"
+                android:scaleType="centerInside"
                 android:src="@drawable/first_launch_bobysex_girl_icon" />
 
         </RelativeLayout>
@@ -66,23 +62,19 @@
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="2" >
 
             <ImageView
                 android:id="@+id/first_launch_baby_info_boy_icon"
-                android:layout_width="fill_parent"
+                android:layout_width="@dimen/first_lanunch_babyinfo_icon_width"
                 android:layout_height="fill_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_centerHorizontal="false"
-                android:scaleType="fitEnd"
+                android:scaleType="centerInside"
                 android:src="@drawable/first_launch_bobysex_boy_icon" />
+
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" >
-        </RelativeLayout>
     </LinearLayout>
     
     
@@ -90,20 +82,15 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/first_lanunch_selected_icon_height">
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" >
-        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="2" >
 
             <ImageView
                 android:id="@+id/first_launch_select_girl_icon"
-                android:layout_width="fill_parent"
+                android:layout_width="@dimen/first_lanunch_babyinfo_icon_width"
                 android:layout_height="fill_parent"
                 android:layout_alignParentRight="true"
                 android:layout_centerHorizontal="false"
@@ -121,11 +108,11 @@
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="2" >
 
             <ImageView
                 android:id="@+id/first_launch_select_boy_icon"
-                android:layout_width="fill_parent"
+                android:layout_width="@dimen/first_lanunch_babyinfo_icon_width"
                 android:layout_height="fill_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_centerHorizontal="false"
@@ -133,11 +120,7 @@
                 android:src="@drawable/first_launch_selected_ico" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" >
-        </RelativeLayout>
+      
     </LinearLayout>
     
     <LinearLayout

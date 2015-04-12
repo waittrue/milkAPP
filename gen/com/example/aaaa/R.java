@@ -1799,6 +1799,7 @@ containing a value of this type.
         public static final int disabled_alpha_material_dark=0x7f080001;
         public static final int disabled_alpha_material_light=0x7f080000;
         public static final int first_lanunch_babyinfo_icon_height=0x7f080099;
+        public static final int first_lanunch_babyinfo_icon_width=0x7f08009a;
         public static final int first_lanunch_babyinfo_text_size=0x7f080097;
         public static final int first_lanunch_babysex_edittext_height=0x7f080098;
         public static final int first_lanunch_babysex_text_icon_height=0x7f080096;
@@ -1808,25 +1809,25 @@ containing a value of this type.
         public static final int first_lanunch_bottom_height=0x7f08008c;
         /**  这个必须是 first_lanunch_weight_girl_boy_icon_height 和 first_lanunch_weight_ruler_container_container_height的和
          */
-        public static final int first_lanunch_height_choose_height=0x7f0800a4;
+        public static final int first_lanunch_height_choose_height=0x7f0800a5;
         public static final int first_lanunch_parents_icon_width=0x7f080092;
         public static final int first_lanunch_parents_name_width=0x7f080093;
         public static final int first_lanunch_parents_select_icon_width=0x7f080094;
-        public static final int first_lanunch_selected_icon_height=0x7f08009a;
+        public static final int first_lanunch_selected_icon_height=0x7f08009b;
         public static final int first_lanunch_small_bots_container_height=0x7f080091;
         public static final int first_lanunch_title_height=0x7f08008d;
         public static final int first_lanunch_title_text_height=0x7f080090;
         public static final int first_lanunch_title_text_size=0x7f08008e;
         public static final int first_lanunch_title_text_width=0x7f08008f;
-        public static final int first_lanunch_weight_girl_boy_icon_height=0x7f08009e;
-        public static final int first_lanunch_weight_girl_boy_icon_width=0x7f08009d;
-        public static final int first_lanunch_weight_num_text_size=0x7f08009b;
-        public static final int first_lanunch_weight_ruler_container_container_height=0x7f0800a1;
-        public static final int first_lanunch_weight_ruler_height=0x7f08009f;
-        public static final int first_lanunch_weight_ruler_jt_height=0x7f0800a3;
-        public static final int first_lanunch_weight_ruler_jt_margin_bottom=0x7f0800a2;
-        public static final int first_lanunch_weight_ruler_margin=0x7f0800a0;
-        public static final int first_lanunch_weight_unit_text_size=0x7f08009c;
+        public static final int first_lanunch_weight_girl_boy_icon_height=0x7f08009f;
+        public static final int first_lanunch_weight_girl_boy_icon_width=0x7f08009e;
+        public static final int first_lanunch_weight_num_text_size=0x7f08009c;
+        public static final int first_lanunch_weight_ruler_container_container_height=0x7f0800a2;
+        public static final int first_lanunch_weight_ruler_height=0x7f0800a0;
+        public static final int first_lanunch_weight_ruler_jt_height=0x7f0800a4;
+        public static final int first_lanunch_weight_ruler_jt_margin_bottom=0x7f0800a3;
+        public static final int first_lanunch_weight_ruler_margin=0x7f0800a1;
+        public static final int first_lanunch_weight_unit_text_size=0x7f08009d;
         /**  footer_navigation_fragment 
          */
         public static final int footer_navigation_fragment_height=0x7f080048;

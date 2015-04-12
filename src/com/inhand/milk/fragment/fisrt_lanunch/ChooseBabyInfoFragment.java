@@ -41,7 +41,7 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 	private EditText nameEdit;
 	private TextView birthdayTextView;
 	private static final int animotionTime1 = 1000;
-	private boolean selectSex = false;
+	private int selectSex = 0;//1 boy,2 girl
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -50,11 +50,27 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		View view = inflater.inflate(R.layout.first_launch_choose_baby_info, null);
 		setTitle(getResources().getString(R.string.first_launch_choose_baby_info));
 		initViews(view);
-		Toast.makeText(this.getActivity().getApplicationContext(), "oncreatview", 100).show();
+		setPre();
 		return view;
 		
 	}
 	
+	
+	@Override
+	public void onHiddenChanged(boolean hidden) {
+		// TODO Auto-generated method stub
+		super.onHiddenChanged(hidden);
+		if (!hidden){
+			setTitle(getResources().getString(R.string.first_launch_choose_baby_info));
+			girlIcon.clearAnimation();
+			boyIcon.clearAnimation();
+			inAnimation();
+			setPre();
+			setNextclick();
+		}
+	}
+
+
 	private void initViews(View view){
 		babySex = (ImageView)view.findViewById(R.id.first_launch_babyinfo_sex_icon);
 		boyIcon = (ImageView)view.findViewById(R.id.first_launch_baby_info_boy_icon);
@@ -65,38 +81,18 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		nameEdit = (EditText)view.findViewById(R.id.first_launch_baby_info_name_edittext);	
 		girlselect = (ImageView)view.findViewById(R.id.first_launch_select_girl_icon);
 		boyselect = (ImageView)view.findViewById(R.id.first_launch_select_boy_icon);
-		
+		nameEdit.clearFocus();
 		birthdayTextView.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				showDatePickerDialog();
-				birthdayTextView.requestFocus();
+				//birthdayTextView.requestFocus();
 			}
 		});
 		
-		nameEdit.clearFocus();
-		nameEdit.setOnFocusChangeListener(new OnFocusChangeListener() {
-			
-			@Override
-			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
-				if (hasFocus){
-					Toast.makeText(getActivity().getApplicationContext(),
-								"hasfocus", 1000).show();
-					nameEdit.setHint("");
-					getActivity().getWindow().setSoftInputMode(WindowManager.
-								LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-					/*
-					InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(
-							 getActivity().getApplicationContext().INPUT_METHOD_SERVICE); 
-			        imm.showSoftInput(nameEdit, 0);
-			        */
-				}
-				
-			}
-		});
+	
 		
 		nameEdit.setOnEditorActionListener(new OnEditorActionListener() {
 			@Override
@@ -110,10 +106,10 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 							 getActivity().getApplicationContext().INPUT_METHOD_SERVICE); 
 			        imm.hideSoftInputFromWindow(nameEdit.getWindowToken(),0);
 			        nameEdit.clearFocus();
-			        
+			        babySex.performClick();
 			        //????????????????????????
 			        Animation animation = new TranslateAnimation(0, 0, 0, 0);
-					animation.setDuration(200);
+					animation.setDuration(100);
 					animation.setFillAfter(true);
 					boyIcon.startAnimation(animation);
 					animation.setAnimationListener(new AnimationListener() {
@@ -152,8 +148,8 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 			        			1000).show();
 			        }
 			       enterInit();
-			       */
-			        
+			       
+			        */
 			       return true; 
 			        
 				}	
@@ -168,9 +164,9 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				alphAnimation(girlselect, 1,animotionTime1);
+				alphAnimation(girlselect, 1,100);
 				boyselect.setAlpha(0f);
-				selectSex = true;
+				selectSex = 2;
 				setNextclick();
 			}
 		});
@@ -179,9 +175,9 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				alphAnimation(boyselect, 1,animotionTime1);
+				alphAnimation(boyselect, 1,100);
 				girlselect.setAlpha(0f);
-				selectSex = true;
+				selectSex = 1;
 				setNextclick();
 			}
 		});
@@ -240,32 +236,7 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 			}
 		});
 	}
-	/*
-	private void enterInit(){
-		lanunchBottom.setPreListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				lanunchBottom.NextLeftAnimation();
-				enterPreFragment();
-			}
-		});
-		
-		lanunchBottom.setNextListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Toast.makeText(getActivity().getApplicationContext(),"dianji xiayibu",
-						1000).show();
-				enterNextFragmet();
-			}
-		});
-		
-		lanunchBottom.setNextClickable(false);
-	}
-*/
+	
 	@Override
 	protected void inAnimation() {
 		// TODO Auto-generated method stub
@@ -274,6 +245,10 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		alphAnimation(babySex,1f,animotionTime1);
 		scaleAnimation(birthdayTextView,1f,animotionTime1);
 		scaleAnimation(nameEdit,1f,animotionTime1);
+		if (selectSex == 1)
+			alphAnimation(boyselect, 1f, animotionTime1);
+		else if (selectSex == 2)
+			alphAnimation(girlselect, 1f, animotionTime1);
 		
 		Animation animation = new TranslateAnimation(-width/2, 0, 0, 0);
 		animation.setDuration(animotionTime1);
@@ -302,8 +277,7 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 			public void onAnimationEnd(Animation animation) {
 				// TODO Auto-generated method stub
 				//enterInit();
-				setPre();
-			}
+							}
 		});
 		
 	}
@@ -316,7 +290,8 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		alphAnimation(babySex,0f,animotionTime1);
 		scaleAnimation(birthdayTextView,0f,animotionTime1);
 		scaleAnimation(nameEdit,0f,animotionTime1);
-		
+		boyselect.setAlpha(0f);
+		girlselect.setAlpha(0f);
 		Animation animation = new TranslateAnimation(0, -width/2, 0, 0);
 		animation.setDuration(animotionTime1);
 		animation.setFillAfter(true);
@@ -354,7 +329,7 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		String name = nameEdit.getText().toString();
 		
 		if (str.equals(getResources().getString(R.string.first_launch_choose_babysex_date)) 
-				|| name.equals("") || selectSex == false){
+				|| name.equals("") || selectSex == 0){
 			Toast.makeText(getActivity().getApplicationContext(),
 					str +":"+name+":"+String.valueOf( boyselect.getAlpha()), 1000).show();
 			return ;
@@ -370,6 +345,6 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		String str =  birthdayTextView.getText().toString();
 		String name = nameEdit.getText().toString();
 		Toast.makeText(getActivity().getApplicationContext(),
-				str +":"+name, 1000).show();
+				str +":"+name+":"+String.valueOf(selectSex), 1000).show();
 	}
 }
