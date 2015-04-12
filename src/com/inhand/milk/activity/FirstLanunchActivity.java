@@ -25,6 +25,7 @@ public class FirstLanunchActivity extends Activity {
 	private FirstLanunchBottom bottomView;
 	private SmallDotsTab smallDotsTab;
 	private final int num = 6;
+	private String extraInfo;
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
@@ -89,4 +90,5 @@ public class FirstLanunchActivity extends Activity {
 		TextView view = (TextView)findViewById(R.id.first_launch_title_text);
 		view.setText(str);
 	}
+	
 }

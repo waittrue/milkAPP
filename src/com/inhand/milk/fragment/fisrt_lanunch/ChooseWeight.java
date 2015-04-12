@@ -1,5 +1,7 @@
 package com.inhand.milk.fragment.fisrt_lanunch;
 
+import java.nio.channels.spi.SelectorProvider;
+
 import com.example.aaaa.R;
 import com.example.aaaa.R.layout;
 import com.inhand.milk.utils.firstlanunch.Ruler;
@@ -28,9 +30,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class babyWeight extends FirstLaunchFragment{
+public class ChooseWeight extends FirstLaunchFragment{
 	
-	private ImageView Icon;
+	private ImageView Icon,rulerJt;
 	private LinearLayout ruler;
 	private TextView num,unit;
 	private HorizontalScrollView ScrollView;
@@ -50,6 +52,13 @@ public class babyWeight extends FirstLaunchFragment{
 
 	private void initViews(View view){
 		Icon = (ImageView)view.findViewById(R.id.first_launch_weight_girl_boy_icon);
+		String sex = getExtraInfo();
+		if (sex.equals("boy"))
+			Icon.setImageDrawable(getResources().getDrawable(R.drawable.first_launch_weight_boy_icon));
+		else if (sex.equals("girl"))
+			Icon.setImageDrawable(getResources().getDrawable(R.drawable.first_launch_weight_girl_icon));
+		
+		rulerJt = (ImageView)view.findViewById(R.id.first_launch_weight_ruler_jt_icon);
 		ruler = (LinearLayout)view.findViewById(R.id.first_launch_choose_weight_ruler_container);
 		num = (TextView)view.findViewById(R.id.first_launch_weight_num_textview);
 		unit = (TextView)view.findViewById(R.id.first_launch_weight_unit_textview);
@@ -60,7 +69,8 @@ public class babyWeight extends FirstLaunchFragment{
 					0f,(float) getResources().getDimension(R.dimen.first_lanunch_weight_ruler_height),
 					0, 500,spacing,spacingnum, true);
 		
-		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);  
+		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+				LinearLayout.LayoutParams.WRAP_CONTENT);  
 		
 		lp.setMargins(0, (int) getResources().getDimension(R.dimen.first_lanunch_weight_ruler_margin)
 				, 20, 0);
@@ -79,7 +89,7 @@ public class babyWeight extends FirstLaunchFragment{
 			        // 可以监听到ScrollView的滚动事件
 			        Log.i("ruler", String.valueOf( (ScrollView.getScrollX()) ) );
 			        float x = ScrollView.getScrollX();
-			        x = x/spacing * spacingnum /10.f;
+			        x = x/spacing * spacingnum /10f;
 			        num.setText( String.format("%.1f",x));
 			        setNext();
 			    }
@@ -89,15 +99,25 @@ public class babyWeight extends FirstLaunchFragment{
 	}
 	
 	@Override
-	protected Fragment nextFragment() {
+	public void onHiddenChanged(boolean hidden) {
 		// TODO Auto-generated method stub
-		return null;
+		super.onHiddenChanged(hidden);
+		if (!hidden){
+			setTitle(getResources().getString(R.string.first_launch_choose_weight_info));
+			if (	!num.getText().toString().equals("0.0")	)
+				setNext();
+			Icon.clearAnimation();
+			inAnimation();
+		}
 	}
 
 	@Override
-	protected void inAnimation() {
+	protected Fragment nextFragment() {
 		// TODO Auto-generated method stub
-		
+		return new ChooseHeight();
+	}
+
+	private void setPre(){
 		lanunchBottom.setPreListener(new OnClickListener() {
 			
 			@Override
@@ -106,10 +126,15 @@ public class babyWeight extends FirstLaunchFragment{
 				enterPreFragment();
 			}
 		});
-		
+	}
+	@Override
+	protected void inAnimation() {
+		// TODO Auto-generated method stub
+		setPre();
 		alphAnimation(unit, 1f, time);
 		alphAnimation(num, 1f, time);
 		alphAnimation(ScrollView, 1f, time);
+		alphAnimation(rulerJt, 1f, time);
 		Animation animation = new TranslateAnimation(-width/2,0, 0, 0);
 		animation.setFillAfter(true);
 		animation.setDuration(time);
@@ -119,14 +144,15 @@ public class babyWeight extends FirstLaunchFragment{
 	@Override
 	protected void outAnimation() {
 		// TODO Auto-generated method stub
-		/*
+		
 		alphAnimation(unit, 0f, time);
 		alphAnimation(num, 0f, time);
 		alphAnimation(ScrollView, 0f, time);
-		*/
+		alphAnimation(rulerJt, 0f, time);
 		
-		int movedown = (int) getResources().getDimension(R.dimen.first_lanunch_height_choose_height);
-		Animation animation = new TranslateAnimation(0,0,0,1000);
+		int movedown = (int) getResources().getDimension(
+				R.dimen.first_lanunch_weight_ruler_container_container_height);
+		Animation animation = new TranslateAnimation(0,0,0,movedown);
 		animation.setFillAfter(true);
 		animation.setDuration(time);
 		Icon.startAnimation(animation);

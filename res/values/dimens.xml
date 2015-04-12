@@ -159,6 +159,7 @@
    	<dimen name="first_lanunch_weight_num_text_size">40sp</dimen>
    	<dimen name="first_lanunch_weight_unit_text_size">20sp</dimen>
    	<dimen name="first_lanunch_weight_girl_boy_icon_width">120dp</dimen>
+   	
    	<dimen name="first_lanunch_weight_girl_boy_icon_height">200dp</dimen>
    	<dimen name="first_lanunch_weight_ruler_height">100dp</dimen>
    	<dimen name="first_lanunch_weight_ruler_margin">10dp</dimen>
@@ -167,4 +168,7 @@
    	<dimen name="first_lanunch_weight_ruler_jt_height">40dp</dimen>
    	<!-- 这个必须是 first_lanunch_weight_girl_boy_icon_height 和 first_lanunch_weight_ruler_container_container_height的和-->
    	<dimen name="first_lanunch_height_choose_height">350dp</dimen>
+   	
+   	<dimen name="first_lanunch_height_ruler_width">80dp</dimen>
+   	<dimen name="first_lanunch_height_ruler_jt_margin_left">-10dp</dimen>
 </resources>

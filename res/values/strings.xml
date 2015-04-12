@@ -64,4 +64,5 @@
     <string name="first_launch_choose_babysex_name">填写宝宝的昵称</string>
     <string name="first_launch_choose_baby_info">宝宝基础信息</string>
     <string name="first_launch_choose_weight_info">宝宝的体重</string>
+    <string name="first_launch_choose_height_info">宝宝的身高</string>
 </resources>

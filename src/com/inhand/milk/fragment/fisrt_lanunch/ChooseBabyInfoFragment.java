@@ -106,52 +106,8 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 							 getActivity().getApplicationContext().INPUT_METHOD_SERVICE); 
 			        imm.hideSoftInputFromWindow(nameEdit.getWindowToken(),0);
 			        nameEdit.clearFocus();
-			        babySex.performClick();
-			        //????????????????????????
-			        Animation animation = new TranslateAnimation(0, 0, 0, 0);
-					animation.setDuration(100);
-					animation.setFillAfter(true);
-					boyIcon.startAnimation(animation);
-					animation.setAnimationListener(new AnimationListener() {
-						
-						@Override
-						public void onAnimationStart(Animation animation) {
-							// TODO Auto-generated method stub
-							
-						}
-						
-						@Override
-						public void onAnimationRepeat(Animation animation) {
-							// TODO Auto-generated method stub
-							
-						}
-						
-						@Override
-						public void onAnimationEnd(Animation animation) {
-							// TODO Auto-generated method stub
-							//enterInit();
-							setPre();
-							setNextclick();
-						}
-					});
-			        //inAnimation();
-			        //setPre();
-			        //nameEdit.clearFocus();
-			        /*
-			        lanunchBottom.setPrefocus();
-			        if (lanunchBottom.getPreFocus()){
-			        	Toast.makeText(getActivity().getApplicationContext(), "bottom has focus",
-			        			1000).show();
-			        }
-			        else {
-			        	Toast.makeText(getActivity().getApplicationContext(), "bottom no focus",
-			        			1000).show();
-			        }
-			       enterInit();
-			       
-			        */
-			       return true; 
-			        
+			        setNextclick();
+			        return true; 
 				}	
 				return false;
 			}
@@ -187,7 +143,7 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 	@Override
 	protected Fragment nextFragment() {
 		// TODO Auto-generated method stub
-		return new babyWeight();
+		return new ChooseWeight();
 	}
 	private void showDatePickerDialog(){
 		Calendar calendar = Calendar.getInstance();
@@ -245,10 +201,7 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		alphAnimation(babySex,1f,animotionTime1);
 		scaleAnimation(birthdayTextView,1f,animotionTime1);
 		scaleAnimation(nameEdit,1f,animotionTime1);
-		if (selectSex == 1)
-			alphAnimation(boyselect, 1f, animotionTime1);
-		else if (selectSex == 2)
-			alphAnimation(girlselect, 1f, animotionTime1);
+		
 		
 		Animation animation = new TranslateAnimation(-width/2, 0, 0, 0);
 		animation.setDuration(animotionTime1);
@@ -276,7 +229,10 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 			@Override
 			public void onAnimationEnd(Animation animation) {
 				// TODO Auto-generated method stub
-				//enterInit();
+				if (selectSex == 1)
+					alphAnimation(boyselect, 1f, 100);
+				else if (selectSex == 2)
+					alphAnimation(girlselect, 1f,100);
 							}
 		});
 		
@@ -320,6 +276,12 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 				// TODO Auto-generated method stub
 				enterNextFragmet();
 				saveDate();
+				if(selectSex == 1){
+					setExtraInfo("boy");
+				}
+				else if (selectSex == 2){
+					setExtraInfo("girl");
+				}
 				
 			}
 		});

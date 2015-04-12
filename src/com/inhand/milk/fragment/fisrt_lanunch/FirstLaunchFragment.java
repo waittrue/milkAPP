@@ -19,6 +19,7 @@ import android.widget.Toast;
 public abstract class FirstLaunchFragment extends Fragment {
 	protected FirstLanunchBottom lanunchBottom;
 	protected float width;
+	private static String extraInfo;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -100,6 +101,12 @@ public abstract class FirstLaunchFragment extends Fragment {
 	}
 	protected void setTitle(String str){
 		((FirstLanunchActivity)getActivity()).setTitle(str);
+	}
+	public void setExtraInfo(String str){
+		extraInfo = str;
+	}
+	public String getExtraInfo(){
+		return extraInfo;
 	}
 	protected abstract Fragment nextFragment();
 	protected abstract void inAnimation();

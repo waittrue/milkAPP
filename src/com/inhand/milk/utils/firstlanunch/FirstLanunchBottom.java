@@ -9,9 +9,12 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ImageView.ScaleType;
@@ -38,15 +41,30 @@ public class FirstLanunchBottom extends ViewGroup {
 		pictures.add(getResources().getDrawable(R.drawable.first_launch_next_ico) );
 		pictures.add(getResources().getDrawable(R.drawable.first_launch_finish_ico) );
 		for (Drawable drawable : pictures) {
-			ImageView imageView = new ImageView(context);
+			ImageButton imageView = new ImageButton(context);
 			imageView.setScaleType(ScaleType.CENTER_INSIDE);
 			imageView.setBackgroundDrawable(drawable);
+			imageView.setOnTouchListener(touchlisetner);
 			this.addView(imageView,layoutParams);
 		}
 		this.setBackgroundDrawable(getResources().
 				getDrawable(R.drawable.first_launch_bottom_background));	
+		
 	}
-
+	private View.OnTouchListener touchlisetner =new OnTouchListener() {
+		
+		@Override
+		public boolean onTouch(View v, MotionEvent event) {
+			// TODO Auto-generated method stub
+			Log.i("TAG", "上一步点击"+String.valueOf(event.getAction()));
+			if (event.getAction() ==0){
+				v.performClick();
+				return true;
+			}
+			return false;
+		}
+	};
+	
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
 		// TODO Auto-generated method stub

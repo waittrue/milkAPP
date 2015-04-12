@@ -20,8 +20,7 @@ public class Ruler extends View {
 	private float width,height;
 	private boolean vertical ;
 	private int offsetstart;
-	private float lineShortLen;
-	private float lineLongLen;
+	private float lineShortLen,lineLongLen,lineMiddleLen;
 	private float textsize = 20;
 	private int totalNum;
 	public Ruler(Context context,float containerSize, float w,float h,int s,int e,int spa,int spanum,boolean v) {
@@ -43,16 +42,19 @@ public class Ruler extends View {
 		if (w == 0){
 			width = totalNum * spacing;
 			height = h;
+			lineShortLen = h /4;
+			lineLongLen = h/4 + h/8;
 		}
 		else if (h ==0){
 			height = totalNum * spacing;
 			width= w;
+			lineShortLen = w /4;
+			lineLongLen = w/4 + w/8;
 		}	
-		
-		vertical = true;
+		lineMiddleLen = (lineLongLen + lineShortLen)/2;
+		vertical = v;
 		offsetstart = (int)containerSize/2;
-		lineShortLen = h /4;
-		lineLongLen = h/4 + h/8;
+		
 		
 	}
 	@Override
@@ -92,12 +94,15 @@ public class Ruler extends View {
 		if (vertical){
 			if ( (x -offsetstart)%(spacing*10) ==0 ){
 				paint.setAlpha(255);
-				Log.i("ruler",String.valueOf(vertical));
 				canvas.drawLine( x, y, x, y+lineLongLen, paint);
 				String  num = String.valueOf( (x-offsetstart)/spacing*spacingnum/10);
 				paint.setTextSize(textsize);
 				float offset = paint.measureText(num);
 				canvas.drawText(num, x - offset/2 , y +lineLongLen +textsize  , paint);
+			}
+			else if ( (x -offsetstart)%(spacing*5) ==0 ){
+				paint.setAlpha(125);
+				canvas.drawLine(x, y, x, y+lineMiddleLen, paint);
 			}
 			else {
 				paint.setAlpha(125);
@@ -114,6 +119,10 @@ public class Ruler extends View {
 				paint.setTextSize(textsize);
 				float offset = paint.measureText(num);
 				canvas.drawText(num, x - lineLongLen - textsize, y - offset/2, paint);
+			}
+			else if (  (y -offsetstart)% (spacing*5) ==0 ){
+				paint.setAlpha(125);
+				canvas.drawLine(x, y, x - lineMiddleLen, y, paint);
 			}
 			else {
 				paint.setAlpha(125);
