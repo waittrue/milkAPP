@@ -119,7 +119,7 @@
               android:orientation="horizontal" >
 
               <ImageView
-                  android:id="@+id/imageView2"
+                  android:id="@+id/first_launch_baby_info_boy_icon"
                   android:layout_width="@dimen/details_content_under_line_margin_left"
                   android:layout_height="match_parent"
                   android:src="@color/details_content_background_color" />

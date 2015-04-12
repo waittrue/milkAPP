@@ -140,8 +140,29 @@
     
     <!-- first lanunch -->
     <dimen name="first_lanunch_bottom_height">60dp</dimen>
+    <dimen name="first_lanunch_title_height">100dp</dimen>
+    <dimen name="first_lanunch_title_text_size">20dp</dimen>
+    <dimen name="first_lanunch_title_text_width">150dp</dimen>
+    <dimen name="first_lanunch_title_text_height">40dp</dimen>
     <dimen name="first_lanunch_small_bots_container_height">40dp</dimen>
     <dimen name="first_lanunch_parents_icon_width">100dp</dimen>
     <dimen name="first_lanunch_parents_name_width">40dp</dimen>
-       
+    <dimen name="first_lanunch_parents_select_icon_width">50dp</dimen>
+    <dimen name="first_lanunch_babysex_text_icon_width">100dp</dimen>
+    <dimen name="first_lanunch_babysex_text_icon_height">30dp</dimen>
+    <dimen name="first_lanunch_babyinfo_text_size">20sp</dimen>
+   	<dimen name="first_lanunch_babysex_edittext_height">50dp</dimen>
+   	<dimen name="first_lanunch_babyinfo_icon_height">100dp</dimen>
+   	<dimen name="first_lanunch_selected_icon_height">20dp</dimen>
+   	<dimen name="first_lanunch_weight_num_text_size">40sp</dimen>
+   	<dimen name="first_lanunch_weight_unit_text_size">20sp</dimen>
+   	<dimen name="first_lanunch_weight_girl_boy_icon_width">120dp</dimen>
+   	<dimen name="first_lanunch_weight_girl_boy_icon_height">200dp</dimen>
+   	<dimen name="first_lanunch_weight_ruler_height">100dp</dimen>
+   	<dimen name="first_lanunch_weight_ruler_margin">10dp</dimen>
+   	<dimen name="first_lanunch_weight_ruler_container_container_height">150dp</dimen>
+   	<dimen name="first_lanunch_weight_ruler_jt_margin_bottom">-10dp</dimen>
+   	<dimen name="first_lanunch_weight_ruler_jt_height">40dp</dimen>
+   	<!-- 这个必须是 first_lanunch_weight_girl_boy_icon_height 和 first_lanunch_weight_ruler_container_container_height的和-->
+   	<dimen name="first_lanunch_height_choose_height">350dp</dimen>
 </resources>

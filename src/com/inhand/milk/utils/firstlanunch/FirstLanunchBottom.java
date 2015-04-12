@@ -2,7 +2,9 @@ package com.inhand.milk.utils.firstlanunch;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import com.example.aaaa.R;
+
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ImageView.ScaleType;
 
 
@@ -40,7 +43,8 @@ public class FirstLanunchBottom extends ViewGroup {
 			imageView.setBackgroundDrawable(drawable);
 			this.addView(imageView,layoutParams);
 		}
-		this.setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_bottom_background));
+		this.setBackgroundDrawable(getResources().
+				getDrawable(R.drawable.first_launch_bottom_background));	
 	}
 
 	@Override
@@ -56,6 +60,7 @@ public class FirstLanunchBottom extends ViewGroup {
 			top = (getMeasuredHeight() - child.getMeasuredHeight())/2;
 			bottom = top + child.getMeasuredHeight();
 			child.layout(left, top, right, bottom);
+			child.setClickable(false);
 			if (i == childcount -1)
 				child.setVisibility(INVISIBLE);
 				
@@ -70,12 +75,16 @@ public class FirstLanunchBottom extends ViewGroup {
 	}
 	
 	public void setPreListener(OnClickListener listener){
+		Toast.makeText(getContext(), "true", 1000).show();
+		//getChildAt(0).setClickable(true);
 		getChildAt(0).setOnClickListener(listener);
 	}
 	public void setNextListener(OnClickListener listener){
+		//getChildAt(1).setClickable(true);
 		getChildAt(1).setOnClickListener(listener);
 	}
 	public void setFinishListener(OnClickListener listener){
+		//getChildAt(2).setClickable(true);
 		getChildAt(2).setOnClickListener(listener);
 	}
 	
@@ -103,6 +112,7 @@ public class FirstLanunchBottom extends ViewGroup {
 		animator.setFloatValues(view.getTranslationX()+toX);
 		animator.setDuration(1000);
 		animator.start();
+		
 	}
 	private void appearAnimation(View view){
 		view.setAlpha(0);
@@ -115,21 +125,42 @@ public class FirstLanunchBottom extends ViewGroup {
 		animator.start();
 	}
 	public void setPreClickable(boolean a){
-		if (a == true)
+		Toast.makeText(getContext(), String.valueOf(a), 1000).show();
+		if (a == true){
 			getChildAt(0).setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_prev_ico));
-		else 
+			//getChildAt(0).setClickable(true);
+		}
+		else {
 			getChildAt(0).setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_prev_ico));
+			//getChildAt(0).setClickable(false);
+		}
 	}
 	public void setNextClickable(boolean a){
-		if (a == true)
+		if (a == true){
 			getChildAt(1).setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_next_ico));
-		else 
+			//getChildAt(1).setClickable(true);
+		}
+		else {
 			getChildAt(1).setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_next_ico));
+			//getChildAt(1).setClickable(false);
+		}
 	}
 	public void setFinishClickable(boolean a){
-		if (a == true)
+		if (a == true){
 			getChildAt(2).setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_finish_ico));
-		else 
+			//getChildAt(2).setClickable(true);
+		}
+		else{ 
 			getChildAt(2).setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_finish_ico));
+			//getChildAt(2).setClickable(false);
+		}
 	}
+
+	public void clearAllClick(){
+		Toast.makeText(getContext(), "false", 1000).show();
+		getChildAt(0).setOnClickListener(null);
+		getChildAt(1).setOnClickListener(null);
+		getChildAt(2).setOnClickListener(null);
+	}
+	
 }

@@ -60,5 +60,12 @@
   	<!-- utils firet lanunch -->
   	<color name="small_dots_select_color">#ffffff</color>
   	<color name="small_dots_noselect_color">#c8c8c8</color>
+  	<color name="ruler_color">#61e5b8</color>
+  	
+  	
+  	<!-- first launch  -->
+  	<color name="first_launch_title_color">#f1f16b</color>
+  	<color name="first_launch_babyinfo_edit_bakcground_color">#000000</color>
+  	<color name="first_launch_babyinfo_edit_text_color">#00ff00</color>
   	    
 </resources>

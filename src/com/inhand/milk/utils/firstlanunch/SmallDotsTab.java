@@ -51,9 +51,20 @@ public class SmallDotsTab extends View {
 		mCanvas.drawCircle(x, dotsR+0.5f, dotsR, paint);
 	}
 	
-	public void  setCurrentDots(int index) {
-		currentIndex = index;
-		invalidate();
+	
+	public void setNextDots(){
+		currentIndex++;
+		if (currentIndex >= dotsNum )
+			currentIndex--;
+		else 
+			invalidate();
+	}
+	public void setPreDots(){
+		currentIndex--;
+		if (currentIndex < 0 )
+			currentIndex = 0;
+		else 
+			invalidate();
 	}
 	
 }

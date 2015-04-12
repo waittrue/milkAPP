@@ -57,4 +57,11 @@
     <string name="details_once_temperature_end">结束饮奶温度</string>
     <string name="details_once_health">本次健康指数</string>
     <string name="details_once_end_time">饮奶结束时间</string>
+    
+    <!-- first launch -->
+    <string name="first_launch_choose_parents">选择你的性别</string>
+    <string name="first_launch_choose_babysex_date">选择宝宝的生日</string>
+    <string name="first_launch_choose_babysex_name">填写宝宝的昵称</string>
+    <string name="first_launch_choose_baby_info">宝宝基础信息</string>
+    <string name="first_launch_choose_weight_info">宝宝的体重</string>
 </resources>

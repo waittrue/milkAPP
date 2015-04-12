@@ -6,10 +6,30 @@
     android:orientation="vertical" >
 
     <LinearLayout
+        android:id="@+id/first_launch_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_lanunch_title_height"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/first_launch_title_text"
+            android:layout_width="@dimen/first_lanunch_title_text_width"
+            android:layout_height="@dimen/first_lanunch_title_text_height"
+            android:layout_gravity="center"
+            android:background="@color/first_launch_title_color"
+            android:gravity="center"
+            android:text="选择"
+            android:textSize="@dimen/first_lanunch_title_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/Activity_fragments_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="5"
         android:orientation="vertical" >
 
     </LinearLayout>

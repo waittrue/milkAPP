@@ -18,6 +18,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class FirstLanunchActivity extends Activity {
 	
@@ -77,10 +78,15 @@ public class FirstLanunchActivity extends Activity {
 		return bottomView;
 	}
 	
-	public void setCurrentIndex(int index){
-		if (index >= num)
-			return;
-		else 
-			smallDotsTab.setCurrentDots(index);
+	public void moveNextDots(){
+		smallDotsTab.setNextDots();
+	}
+	public void movePreDots(){
+		smallDotsTab.setPreDots();
+	}
+	
+	public void setTitle(String str ){
+		TextView view = (TextView)findViewById(R.id.first_launch_title_text);
+		view.setText(str);
 	}
 }
