@@ -65,4 +65,8 @@
     <string name="first_launch_choose_baby_info">宝宝基础信息</string>
     <string name="first_launch_choose_weight_info">宝宝的体重</string>
     <string name="first_launch_choose_height_info">宝宝的身高</string>
+    <string name="first_launch_choose_head_info">宝宝的头围</string>
+    <string name="first_launch_choose_milk_info">宝宝的奶粉</string>
+    <string name="first_launch_choose_milk_text">请选择宝宝的奶粉</string>
+    <string name="first_launch_choose_milk_doc">选择奶粉的重要性，点这里</string>
 </resources>

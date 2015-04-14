@@ -93,7 +93,6 @@ public class FirstLanunchBottom extends ViewGroup {
 	}
 	
 	public void setPreListener(OnClickListener listener){
-		Toast.makeText(getContext(), "true", 1000).show();
 		//getChildAt(0).setClickable(true);
 		getChildAt(0).setOnClickListener(listener);
 	}
@@ -114,9 +113,12 @@ public class FirstLanunchBottom extends ViewGroup {
 		translate(getChildAt(0), false);
 		translate(getChildAt(1), true);
 	}
-	public void LastAnimation(){
-		NextLeftAnimation();
+	public void finishApper(){
+		getChildAt(2).setTranslationX(width/4);
 		appearAnimation(getChildAt(2));
+	}
+	public void finishDisapper(){
+		getChildAt(2).setVisibility(View.INVISIBLE);
 	}
 	
 	private void translate(View view,boolean left){
@@ -137,13 +139,12 @@ public class FirstLanunchBottom extends ViewGroup {
 		view.setVisibility(VISIBLE);
 		ObjectAnimator animator = new ObjectAnimator();
 		animator.setTarget(view);
-		animator.setPropertyName("aplha");
+		animator.setPropertyName("alpha");
 		animator.setFloatValues(1);
 		animator.setDuration(1000);
 		animator.start();
 	}
 	public void setPreClickable(boolean a){
-		Toast.makeText(getContext(), String.valueOf(a), 1000).show();
 		if (a == true){
 			getChildAt(0).setBackgroundDrawable(getResources().getDrawable(R.drawable.first_launch_prev_ico));
 			//getChildAt(0).setClickable(true);
@@ -175,7 +176,6 @@ public class FirstLanunchBottom extends ViewGroup {
 	}
 
 	public void clearAllClick(){
-		Toast.makeText(getContext(), "false", 1000).show();
 		getChildAt(0).setOnClickListener(null);
 		getChildAt(1).setOnClickListener(null);
 		getChildAt(2).setOnClickListener(null);

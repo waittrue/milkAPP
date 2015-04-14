@@ -153,11 +153,11 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="0.75"
-            android:background="@color/first_launch_babyinfo_edit_bakcground_color"
+            android:background="@drawable/first_launch_textview_corner"
             android:ems="10"
             android:gravity="center"
             android:text="@string/first_launch_choose_babysex_date"
-            android:textColor="@color/first_launch_babyinfo_edit_text_color"
+            android:textColor="@color/first_launch_text_color"
             android:textSize="@dimen/first_lanunch_babyinfo_text_size" />
 
         <RelativeLayout
@@ -198,13 +198,13 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="0.75"
-            android:background="#ffffff"
+            android:background="@drawable/first_launch_textview_corner"
+            android:cursorVisible="true"
             android:ems="10"
             android:gravity="center"
-            android:cursorVisible="true"
             android:hint="@string/first_launch_choose_babysex_name"
-            android:textColor="@color/first_launch_babyinfo_edit_text_color"
-            android:textColorHint="@color/first_launch_babyinfo_edit_text_color"
+            android:textColor="@color/first_launch_text_color"
+            android:textColorHint="@color/first_launch_text_color"
             android:textSize="@dimen/first_lanunch_babyinfo_text_size" >
 
             <requestFocus />

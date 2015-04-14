@@ -107,6 +107,7 @@ public class ChooseHeight extends FirstLaunchFragment{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				
 				outAnimation();
 			}
 		});
@@ -114,7 +115,7 @@ public class ChooseHeight extends FirstLaunchFragment{
 	@Override
 	protected Fragment nextFragment() {
 		// TODO Auto-generated method stub
-		return new ChooseWeight();
+		return new ChooseHead();
 	}
 
 	@Override

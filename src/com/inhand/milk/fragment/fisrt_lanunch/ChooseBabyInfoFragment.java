@@ -186,8 +186,6 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Toast.makeText(getActivity().getApplicationContext(),"dianji xiayibu",
-						1000).show();
 				outAnimation();
 			}
 		});
@@ -292,13 +290,9 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		
 		if (str.equals(getResources().getString(R.string.first_launch_choose_babysex_date)) 
 				|| name.equals("") || selectSex == 0){
-			Toast.makeText(getActivity().getApplicationContext(),
-					str +":"+name+":"+String.valueOf( boyselect.getAlpha()), 1000).show();
 			return ;
 		}
 		
-		Toast.makeText(getActivity().getApplicationContext(),
-					"keyidian le", 1000).show();
 		//lanunchBottom.setNextClickable(true);
 		setNext();
 		

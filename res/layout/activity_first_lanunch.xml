@@ -18,7 +18,7 @@
             android:layout_width="@dimen/first_lanunch_title_text_width"
             android:layout_height="@dimen/first_lanunch_title_text_height"
             android:layout_gravity="center"
-            android:background="@color/first_launch_title_color"
+            android:background="@drawable/first_launch_title_textview_corner"
             android:gravity="center"
             android:text="选择"
             android:textSize="@dimen/first_lanunch_title_text_size" />

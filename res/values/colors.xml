@@ -65,7 +65,7 @@
   	
   	<!-- first launch  -->
   	<color name="first_launch_title_color">#f1f16b</color>
-  	<color name="first_launch_babyinfo_edit_bakcground_color">#000000</color>
-  	<color name="first_launch_babyinfo_edit_text_color">#00ff00</color>
+  	<color name="first_launch_text_bakcground_color">#77ffff</color>
+  	<color name="first_launch_text_color">#00ff00</color>
   	    
 </resources>
