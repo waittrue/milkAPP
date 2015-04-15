@@ -104,7 +104,7 @@ public class ChooseParentsFragment extends FirstLaunchFragment {
 			motherSelect.setAlpha(0f);
 			fatherSelect.setAlpha(0f);
 			outAnimation();
-			saveParentsInfo();
+			save();
 		}
 	};
 	
@@ -112,8 +112,10 @@ public class ChooseParentsFragment extends FirstLaunchFragment {
 		mother.setOnClickListener(chooseMather);
 		father.setOnClickListener(chooseFather);
 	}
-	
-	private void saveParentsInfo(){
+	/*
+	 * state表示 1表示爸爸2表示妈妈
+	 */
+	private void save(){
 		Toast.makeText(this.getActivity().getApplicationContext(),
 				String.valueOf(State), 1000).show();
 	}
@@ -121,7 +123,7 @@ public class ChooseParentsFragment extends FirstLaunchFragment {
 	@Override
 	protected Fragment nextFragment() {
 		// TODO Auto-generated method stub
-		return new ChooseBabyInfoFragment();
+		return new ChooseBabyInfo();
 	}
 	
 	private void chooseMother(){

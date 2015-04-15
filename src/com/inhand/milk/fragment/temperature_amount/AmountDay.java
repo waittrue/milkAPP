@@ -25,6 +25,14 @@ public class AmountDay extends OnePaper {
 		excle.setRightTiltle(mActivty.getResources().
 				getString(R.string.milk_excle_day_right_title));
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see com.inhand.milk.fragment.temperature_amount.OnePaper#refreshData(java.util.List)
+	 * 必须把返回来的值赋值到data 里面去；
+	 * 返回的是     今天      每次喝奶 的时间点和奶量<float  float> 时间为3:30 为3.30   奶量单位为ml  
+	 * 
+	 *参照下面
+	 */
 
 	@Override
 	public void refreshData(List<List<float[]>> data) {
@@ -40,4 +48,5 @@ public class AmountDay extends OnePaper {
 		data.add(points);
 	}
 
+	
 }

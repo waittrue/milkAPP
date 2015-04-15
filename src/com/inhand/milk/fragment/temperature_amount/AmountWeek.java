@@ -25,6 +25,11 @@ public class AmountWeek extends OnePaper {
 				getString(R.string.milk_excle_week_right_title));
 	}
 
+	/**
+	 * 返回以当天未起点，7天的每天饮奶的奶量：
+	 * 必须赋值给data 每天饮奶奶量为<float>
+	 */
+
 	@Override
 	public void refreshData(List<List<float[]>> data) {
 		// TODO Auto-generated method stub

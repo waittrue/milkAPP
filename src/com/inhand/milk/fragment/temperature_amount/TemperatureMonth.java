@@ -26,6 +26,11 @@ public class TemperatureMonth extends OnePaper {
 		excle.initMonthText();
 	}
 
+	/**
+	 * 返回当天前30天，温度分为两个<list<float[]>>
+	 * 当天最高温度，当天最低温度
+	 * 每个温度为     < float>
+	 */
 	@Override
 	public void refreshData(List<List<float[]>> data) {
 		// TODO Auto-generated method stub

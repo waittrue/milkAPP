@@ -107,6 +107,7 @@ public class ChooseMilk extends FirstLaunchFragment {
 		intent.setClass(getActivity(), MainActivity.class);
 		getActivity().startActivity(intent);
 	}
+	
 	private void save(){
 		Toast.makeText(getActivity().getApplicationContext(),"—°‘Ò¡ÀƒÃ∑€", 1000).show();
 	}

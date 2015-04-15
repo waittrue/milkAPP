@@ -24,6 +24,10 @@ public class AmountMonth extends OnePaper {
 		excle.setRightTiltle(mActivty.getResources().
 				getString(R.string.milk_excle_month_right_title));
 	}
+	/**
+	 * 返回以当天未起点，30天的每天饮奶的奶量：
+	 * 必须赋值给data 每天奶量为<float>
+	 */
 
 	@Override
 	public void refreshData(List<List<float[]>> data) {

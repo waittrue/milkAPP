@@ -25,6 +25,11 @@ public class TemperatureDay extends OnePaper {
 		excle.initDayText();
 	}
 
+	/**
+	 * 返回当天温度，温度分为两个<list<float[]>>
+	 * 一个代表最高温度，一个最低温度
+	 * 每个温度为     时间 和 温度<float float> 时间3：30 = 3.5
+	 */
 	@Override
 	public void  refreshData(List<List<float[]>> data) {
 		// TODO Auto-generated method stub

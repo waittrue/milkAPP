@@ -64,8 +64,23 @@ public class DetailsFragment  extends TitleFragment{
 		return headview;
 	}
 	
-	
-	//先这样，以后输入参数是日期
+	/**
+	 * 从当前日期开始取出前10天的数据
+	 * 依次赋值title，picture，anount,time;
+	 * 
+	 * title 为当次发生的时间，如3月4日
+	 * 
+	 * isTemperature ==false   amount 代表奶量；奶量过低 picture为details_temperature_warning
+	 * 									奶量正常picture为details_temperature_normal
+	 * 
+	 * isTemperature ==ture  amount 代表温度  如30~40° 当最低温度过低或者最高温度过高的时候picture 为details_amount_warning
+	 * 								否则为details_amount_normal
+	 * 
+	 * time 为该次的发生时间
+	 * 最后加上 
+	 * ItemEntity  itemEntity = new ItemEntity(title, picture, amount, time);
+	 * listItem.add(itemEntity);	
+	 */
 	private  void  getData(){
 		for(int j =0 ;j<3;j++){
 			for(int i=0;i<8;i++){
@@ -76,7 +91,7 @@ public class DetailsFragment  extends TitleFragment{
 				int day = calendar.get(Calendar.DATE) ;
 				int month = calendar.get(Calendar.MONTH);
 				title = String.valueOf(month)+"月"+String.valueOf(day)+"日";
-				if (isTemperature == false){
+				if (isTemperature == true){
 					amount = String.valueOf( (int)( Math.random() * 20 + 30 ) )+" ~ "+
 									String.valueOf( (int)( Math.random() * 20 ) )+"°";
 					if (i / 2 == 0)

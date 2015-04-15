@@ -177,6 +177,10 @@ public class ChooseHeight extends FirstLaunchFragment{
 			}
 		});
 	}
+	/*
+	 * num.getText().toString() 返回身高单位厘米
+	 */
+	
 	private void save(){
 		Toast.makeText(getActivity().getApplicationContext(), num.getText().toString(), 1000).show();
 	}

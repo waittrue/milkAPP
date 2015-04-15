@@ -32,13 +32,24 @@ public class WelcomeActivity extends Activity{
 		Intent intent = new Intent();
 		if ( isfirst() ){
 			intent.setClass(WelcomeActivity.this,FirstLanunchActivity.class );
+			save();
 		}
 		else {
 			intent.setClass(WelcomeActivity.this, MainActivity.class);
 		}
 		startActivity(intent);
 	}
+	/**
+	 * 
+	 * @return 第一次登陆返回真，否则假
+	 */
 	private boolean isfirst(){
 		return true;
+	}
+	/**
+	 * 存入值，表示已经是登陆过了
+	 */
+	private void save(){
+		
 	}
 }

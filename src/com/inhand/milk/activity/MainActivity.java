@@ -18,6 +18,11 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+/**
+ * 
+ * @author Administrator
+ *主要的activity，管理进入app后的几个fragment
+ */
 
 public class MainActivity extends BaseActivty {
 	 

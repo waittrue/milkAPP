@@ -35,7 +35,7 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
-public class ChooseBabyInfoFragment extends FirstLaunchFragment{
+public class ChooseBabyInfo extends FirstLaunchFragment{
 	
 	private ImageView babySex,boyIcon,girlIcon,babyBirthday,babyName,girlselect,boyselect;
 	private EditText nameEdit;
@@ -297,6 +297,13 @@ public class ChooseBabyInfoFragment extends FirstLaunchFragment{
 		setNext();
 		
 	}
+	/**
+	 * 存入 baby 的相关信息 
+	 * str 表示 孩子的生日 格式如 ：2014年2月2号
+	 * name 表示孩子的姓名 格式如：张三
+	 * selectsex 表示孩子的性别 格式如 ：1为男，2为女
+	 * 
+	 */
 	private void saveDate(){
 		String str =  birthdayTextView.getText().toString();
 		String name = nameEdit.getText().toString();

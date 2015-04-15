@@ -180,6 +180,9 @@ public class ChooseHead extends FirstLaunchFragment {
 		icon.startAnimation(animator);
 		
 	}
+	/**
+	 * num.getText().toString() 返回头维的数量 单位：厘米
+	 */ 
 	private void save(){
 		Toast.makeText(this.getActivity().getApplicationContext(), num.getText().toString(),
 					1000).show();

@@ -179,6 +179,7 @@ public class ChooseWeight extends FirstLaunchFragment{
 		});
 		
 	}
+	
 	private void setNext(){
 		lanunchBottom.setNextListener(new OnClickListener() {
 			
@@ -189,6 +190,9 @@ public class ChooseWeight extends FirstLaunchFragment{
 			}
 		});
 	}
+	/*
+	 * Num. getText 表示 返回体重 单位 kg
+	 */
 	private void save(){
 		Toast.makeText(getActivity().getApplicationContext(),
 				num.getText(), 1000).show();
